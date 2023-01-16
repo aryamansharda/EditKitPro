@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "EA163F72-ACB7-43FF-957F-7DA33AF372B7"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1B4FAB3F-8074-49E1-8EFF-4BA34BE76D15"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EditKit/WrapInLocalizedString.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "perform(with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1B4FAB3F-8074-49E1-8EFF-4BA34BE76D15 - f7a928c30b628559"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static EditKit.WrapInLocalizedString.perform(with: __C.XCSourceEditorCommandInvocation) -&gt; ()"
+                  moduleName = "EditKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aryamansharda/Documents/Personal/EditKitPro/EditKit/WrapInLocalizedString.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "1784">
+               </Location>
+               <Location
+                  uuid = "1B4FAB3F-8074-49E1-8EFF-4BA34BE76D15 - f7a928c30b628559"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static EditKit.WrapInLocalizedString.perform(with: __C.XCSourceEditorCommandInvocation) -&gt; ()"
+                  moduleName = "EditKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aryamansharda/Documents/Personal/EditKitPro/EditKit/WrapInLocalizedString.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "1856">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6BB0235F-5A70-4DB5-8BB5-6285EBFE3EE1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EditKit/EditorController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "handle(with:completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6BB0235F-5A70-4DB5-8BB5-6285EBFE3EE1 - b56f4fc61b5cd9db"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static EditKit.EditorController.handle(with: __C.XCSourceEditorCommandInvocation, completionHandler: Swift.Optional&lt;(Swift.Optional&lt;Swift.Error&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "EditKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aryamansharda/Documents/Personal/EditKitPro/EditKit/EditorController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "772">
+               </Location>
+               <Location
+                  uuid = "6BB0235F-5A70-4DB5-8BB5-6285EBFE3EE1 - d9ba7414543e153f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static EditKit.EditorController.handle(with: __C.XCSourceEditorCommandInvocation, completionHandler: Swift.Optional&lt;(Swift.Optional&lt;Swift.Error&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "EditKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aryamansharda/Documents/Personal/EditKitPro/EditKit/EditorController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

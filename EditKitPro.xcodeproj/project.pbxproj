@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		930CD0A0294E456500F58F30 /* StripTrailingWhitespaceCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930CD09F294E456500F58F30 /* StripTrailingWhitespaceCommand.swift */; };
+		932F4D89294E49A900FA27CE /* AlignAroundEqualsCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4D88294E49A900FA27CE /* AlignAroundEqualsCommand.swift */; };
+		932F4D8B294E4A8D00FA27CE /* FormatCodeForSharingCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4D8A294E4A8D00FA27CE /* FormatCodeForSharingCommand.swift */; };
+		932F4D8D294E4DC400FA27CE /* AutoCreateExtensionMarksCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4D8C294E4DC400FA27CE /* AutoCreateExtensionMarksCommand.swift */; };
+		932F4D8F294E504300FA27CE /* SearchInCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4D8E294E504300FA27CE /* SearchInCommand.swift */; };
+		932F4D91294E538A00FA27CE /* WrapInIfDefCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4D90294E538A00FA27CE /* WrapInIfDefCommand.swift */; };
 		93B28301294AEDD200364206 /* EditKitProApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B28300294AEDD200364206 /* EditKitProApp.swift */; };
 		93B28303294AEDD200364206 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B28302294AEDD200364206 /* ContentView.swift */; };
 		93B28305294AEDD200364206 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93B28304294AEDD200364206 /* Assets.xcassets */; };
@@ -14,6 +20,15 @@
 		93B28313294AEDD200364206 /* EditKitProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B28312294AEDD200364206 /* EditKitProTests.swift */; };
 		93B2831D294AEDD200364206 /* EditKitProUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2831C294AEDD200364206 /* EditKitProUITests.swift */; };
 		93B2831F294AEDD200364206 /* EditKitProUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2831E294AEDD200364206 /* EditKitProUITestsLaunchTests.swift */; };
+		93B28332294AEDDD00364206 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B28331294AEDDD00364206 /* Cocoa.framework */; };
+		93B28337294AEDDD00364206 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B28336294AEDDD00364206 /* SourceEditorExtension.swift */; };
+		93B28339294AEDDD00364206 /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B28338294AEDDD00364206 /* SourceEditorCommand.swift */; };
+		93B2833E294AEDDD00364206 /* EditKit.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 93B2832F294AEDDD00364206 /* EditKit.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		93B28343294AEDE000364206 /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B28333294AEDDD00364206 /* XcodeKit.framework */; };
+		93B28344294AEDE000364206 /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 93B28333294AEDDD00364206 /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		93B28347294AEE0200364206 /* EditorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B28346294AEE0200364206 /* EditorController.swift */; };
+		93B2CF332975DA4E006E1A23 /* FormatAsMultiLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF322975DA4E006E1A23 /* FormatAsMultiLine.swift */; };
+		93F9E0E2297525B2009E3B27 /* WrapInLocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F9E0E1297525B2009E3B27 /* WrapInLocalizedString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,9 +46,47 @@
 			remoteGlobalIDString = 93B282FC294AEDD200364206;
 			remoteInfo = EditKitPro;
 		};
+		93B2833C294AEDDD00364206 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93B282F5294AEDD200364206 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93B2832E294AEDDD00364206;
+			remoteInfo = EditKit;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		93B28342294AEDDD00364206 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				93B2833E294AEDDD00364206 /* EditKit.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93B28345294AEDE000364206 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				93B28344294AEDE000364206 /* XcodeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		930CD09F294E456500F58F30 /* StripTrailingWhitespaceCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripTrailingWhitespaceCommand.swift; sourceTree = "<group>"; };
+		932F4D88294E49A900FA27CE /* AlignAroundEqualsCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignAroundEqualsCommand.swift; sourceTree = "<group>"; };
+		932F4D8A294E4A8D00FA27CE /* FormatCodeForSharingCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatCodeForSharingCommand.swift; sourceTree = "<group>"; };
+		932F4D8C294E4DC400FA27CE /* AutoCreateExtensionMarksCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCreateExtensionMarksCommand.swift; sourceTree = "<group>"; };
+		932F4D8E294E504300FA27CE /* SearchInCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInCommand.swift; sourceTree = "<group>"; };
+		932F4D90294E538A00FA27CE /* WrapInIfDefCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapInIfDefCommand.swift; sourceTree = "<group>"; };
 		93B282FD294AEDD200364206 /* EditKitPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EditKitPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93B28300294AEDD200364206 /* EditKitProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditKitProApp.swift; sourceTree = "<group>"; };
 		93B28302294AEDD200364206 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +98,16 @@
 		93B28318294AEDD200364206 /* EditKitProUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EditKitProUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93B2831C294AEDD200364206 /* EditKitProUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditKitProUITests.swift; sourceTree = "<group>"; };
 		93B2831E294AEDD200364206 /* EditKitProUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditKitProUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		93B2832F294AEDDD00364206 /* EditKit.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EditKit.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		93B28331294AEDDD00364206 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		93B28333294AEDDD00364206 /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
+		93B28336294AEDDD00364206 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		93B28338294AEDDD00364206 /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
+		93B2833A294AEDDD00364206 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93B2833B294AEDDD00364206 /* EditKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EditKit.entitlements; sourceTree = "<group>"; };
+		93B28346294AEE0200364206 /* EditorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorController.swift; sourceTree = "<group>"; };
+		93B2CF322975DA4E006E1A23 /* FormatAsMultiLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatAsMultiLine.swift; sourceTree = "<group>"; };
+		93F9E0E1297525B2009E3B27 /* WrapInLocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapInLocalizedString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +132,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		93B2832C294AEDDD00364206 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93B28332294AEDDD00364206 /* Cocoa.framework in Frameworks */,
+				93B28343294AEDE000364206 /* XcodeKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +150,8 @@
 				93B282FF294AEDD200364206 /* EditKitPro */,
 				93B28311294AEDD200364206 /* EditKitProTests */,
 				93B2831B294AEDD200364206 /* EditKitProUITests */,
+				93B28335294AEDDD00364206 /* EditKit */,
+				93B28330294AEDDD00364206 /* Frameworks */,
 				93B282FE294AEDD200364206 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +162,7 @@
 				93B282FD294AEDD200364206 /* EditKitPro.app */,
 				93B2830E294AEDD200364206 /* EditKitProTests.xctest */,
 				93B28318294AEDD200364206 /* EditKitProUITests.xctest */,
+				93B2832F294AEDDD00364206 /* EditKit.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,6 +204,43 @@
 			path = EditKitProUITests;
 			sourceTree = "<group>";
 		};
+		93B28330294AEDDD00364206 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93B28331294AEDDD00364206 /* Cocoa.framework */,
+				93B28333294AEDDD00364206 /* XcodeKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		93B28335294AEDDD00364206 /* EditKit */ = {
+			isa = PBXGroup;
+			children = (
+				93B28336294AEDDD00364206 /* SourceEditorExtension.swift */,
+				93B28338294AEDDD00364206 /* SourceEditorCommand.swift */,
+				93B28346294AEE0200364206 /* EditorController.swift */,
+				930CD09F294E456500F58F30 /* StripTrailingWhitespaceCommand.swift */,
+				93B2CF342975E291006E1A23 /* Mine */,
+				932F4D8A294E4A8D00FA27CE /* FormatCodeForSharingCommand.swift */,
+				93B2CF322975DA4E006E1A23 /* FormatAsMultiLine.swift */,
+				932F4D8C294E4DC400FA27CE /* AutoCreateExtensionMarksCommand.swift */,
+				932F4D8E294E504300FA27CE /* SearchInCommand.swift */,
+				932F4D90294E538A00FA27CE /* WrapInIfDefCommand.swift */,
+				93B2833B294AEDDD00364206 /* EditKit.entitlements */,
+				93B2833A294AEDDD00364206 /* Info.plist */,
+			);
+			path = EditKit;
+			sourceTree = "<group>";
+		};
+		93B2CF342975E291006E1A23 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				93F9E0E1297525B2009E3B27 /* WrapInLocalizedString.swift */,
+				932F4D88294E49A900FA27CE /* AlignAroundEqualsCommand.swift */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,10 +251,12 @@
 				93B282F9294AEDD200364206 /* Sources */,
 				93B282FA294AEDD200364206 /* Frameworks */,
 				93B282FB294AEDD200364206 /* Resources */,
+				93B28342294AEDDD00364206 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				93B2833D294AEDDD00364206 /* PBXTargetDependency */,
 			);
 			name = EditKitPro;
 			productName = EditKitPro;
@@ -185,6 +299,24 @@
 			productReference = 93B28318294AEDD200364206 /* EditKitProUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		93B2832E294AEDDD00364206 /* EditKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93B2833F294AEDDD00364206 /* Build configuration list for PBXNativeTarget "EditKit" */;
+			buildPhases = (
+				93B2832B294AEDDD00364206 /* Sources */,
+				93B2832C294AEDDD00364206 /* Frameworks */,
+				93B2832D294AEDDD00364206 /* Resources */,
+				93B28345294AEDE000364206 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EditKit;
+			productName = EditKit;
+			productReference = 93B2832F294AEDDD00364206 /* EditKit.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -206,6 +338,9 @@
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = 93B282FC294AEDD200364206;
 					};
+					93B2832E294AEDDD00364206 = {
+						CreatedOnToolsVersion = 14.1;
+					};
 				};
 			};
 			buildConfigurationList = 93B282F8294AEDD200364206 /* Build configuration list for PBXProject "EditKitPro" */;
@@ -224,6 +359,7 @@
 				93B282FC294AEDD200364206 /* EditKitPro */,
 				93B2830D294AEDD200364206 /* EditKitProTests */,
 				93B28317294AEDD200364206 /* EditKitProUITests */,
+				93B2832E294AEDDD00364206 /* EditKit */,
 			);
 		};
 /* End PBXProject section */
@@ -246,6 +382,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		93B28316294AEDD200364206 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93B2832D294AEDDD00364206 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -281,6 +424,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		93B2832B294AEDDD00364206 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93B28337294AEDDD00364206 /* SourceEditorExtension.swift in Sources */,
+				932F4D8D294E4DC400FA27CE /* AutoCreateExtensionMarksCommand.swift in Sources */,
+				93B2CF332975DA4E006E1A23 /* FormatAsMultiLine.swift in Sources */,
+				932F4D91294E538A00FA27CE /* WrapInIfDefCommand.swift in Sources */,
+				93B28347294AEE0200364206 /* EditorController.swift in Sources */,
+				932F4D8B294E4A8D00FA27CE /* FormatCodeForSharingCommand.swift in Sources */,
+				932F4D8F294E504300FA27CE /* SearchInCommand.swift in Sources */,
+				932F4D89294E49A900FA27CE /* AlignAroundEqualsCommand.swift in Sources */,
+				93F9E0E2297525B2009E3B27 /* WrapInLocalizedString.swift in Sources */,
+				93B28339294AEDDD00364206 /* SourceEditorCommand.swift in Sources */,
+				930CD0A0294E456500F58F30 /* StripTrailingWhitespaceCommand.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -293,6 +454,11 @@
 			isa = PBXTargetDependency;
 			target = 93B282FC294AEDD200364206 /* EditKitPro */;
 			targetProxy = 93B28319294AEDD200364206 /* PBXContainerItemProxy */;
+		};
+		93B2833D294AEDDD00364206 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93B2832E294AEDDD00364206 /* EditKit */;
+			targetProxy = 93B2833C294AEDDD00364206 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -413,6 +579,7 @@
 		93B28323294AEDD200364206 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = EditKitPro/EditKitPro.entitlements;
@@ -424,6 +591,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -440,6 +608,7 @@
 		93B28324294AEDD200364206 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = EditKitPro/EditKitPro.entitlements;
@@ -451,6 +620,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -536,6 +706,62 @@
 			};
 			name = Release;
 		};
+		93B28340294AEDDD00364206 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = EditKit/EditKit.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W735WRNN72;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EditKit/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = EditKit;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AryamanSharda.EditKitPro.EditKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		93B28341294AEDDD00364206 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = EditKit/EditKit.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W735WRNN72;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EditKit/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = EditKit;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AryamanSharda.EditKitPro.EditKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -571,6 +797,15 @@
 			buildConfigurations = (
 				93B28329294AEDD200364206 /* Debug */,
 				93B2832A294AEDD200364206 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93B2833F294AEDDD00364206 /* Build configuration list for PBXNativeTarget "EditKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93B28340294AEDDD00364206 /* Debug */,
+				93B28341294AEDDD00364206 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
