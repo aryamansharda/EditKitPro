@@ -46,15 +46,7 @@
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>EditKitPro.EditKit.AutoCreateExtensionMarks</string>
 					<key>XCSourceEditorCommandName</key>
-					<string>Auto MARK Extensions</string>
-				</dict>
-				<dict>
-					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
-					<key>XCSourceEditorCommandIdentifier</key>
-					<string>EditKitPro.EditKit.SearchInGoogle</string>
-					<key>XCSourceEditorCommandName</key>
-					<string>Search In Google</string>
+					<string>Auto-Mark Extensions</string>
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
@@ -62,7 +54,7 @@
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>EditKitPro.EditKit.WrapInIfDef</string>
 					<key>XCSourceEditorCommandName</key>
-					<string>Wrap In If Def</string>
+					<string>Wrap in #ifdef</string>
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
@@ -78,7 +70,7 @@
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>EditKitPro.EditKit.WrapInLocalizedString</string>
 					<key>XCSourceEditorCommandName</key>
-					<string>Wrap In Localized String</string>
+					<string>Wrap in NSLocalizedString</string>
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
@@ -94,7 +86,7 @@
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>EditKitPro.EditKit.SearchOnPlatform.Google</string>
 					<key>XCSourceEditorCommandName</key>
-					<string>Search On Google</string>
+					<string>Search selection on Google</string>
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
@@ -102,7 +94,7 @@
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>EditKitPro.EditKit.SearchOnPlatform.StackOverflow</string>
 					<key>XCSourceEditorCommandName</key>
-					<string>Search On StackOverflow</string>
+					<string>Search selection on StackOverflow</string>
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
@@ -110,7 +102,15 @@
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>EditKitPro.EditKit.SearchOnPlatform.GitHub</string>
 					<key>XCSourceEditorCommandName</key>
-					<string>Search On GitHub</string>
+					<string>Search selection on GitHub</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>EditKitPro.EditKit.ConvertJSONToCodable</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Convert JSON to Codable</string>
 				</dict>
 			</array>
 			<key>XCSourceEditorExtensionPrincipalClass</key>

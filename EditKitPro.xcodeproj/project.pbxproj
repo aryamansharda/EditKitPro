@@ -28,6 +28,25 @@
 		93B28344294AEDE000364206 /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 93B28333294AEDDD00364206 /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		93B28347294AEE0200364206 /* EditorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B28346294AEE0200364206 /* EditorController.swift */; };
 		93B2CF332975DA4E006E1A23 /* FormatAsMultiLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF322975DA4E006E1A23 /* FormatAsMultiLine.swift */; };
+		93B2CF362975FB52006E1A23 /* AutoMarkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF352975FB52006E1A23 /* AutoMarkCommand.swift */; };
+		93B2CF4B2976094D006E1A23 /* ConvertJSONToCodableCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF4A2976094D006E1A23 /* ConvertJSONToCodableCommand.swift */; };
+		93B2CF6629760B6E006E1A23 /* NodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF6529760B6E006E1A23 /* NodeViewModel.swift */; };
+		93B2CF6929760B77006E1A23 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF6829760B77006E1A23 /* Node.swift */; };
+		93B2CF6A29760B77006E1A23 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF6729760B77006E1A23 /* Tree.swift */; };
+		93B2CF6C29760B7A006E1A23 /* Copyable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF6B29760B7A006E1A23 /* Copyable.swift */; };
+		93B2CF6F29760B83006E1A23 /* Primitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF6E29760B83006E1A23 /* Primitive.swift */; };
+		93B2CF7029760B83006E1A23 /* GeneratorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF6D29760B83006E1A23 /* GeneratorType.swift */; };
+		93B2CF7329760B8B006E1A23 /* KotlinTypeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF7129760B8B006E1A23 /* KotlinTypeHandler.swift */; };
+		93B2CF7429760B8B006E1A23 /* SwiftTypeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF7229760B8B006E1A23 /* SwiftTypeHandler.swift */; };
+		93B2CF7829760B94006E1A23 /* SwiftGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF7529760B93006E1A23 /* SwiftGenerator.swift */; };
+		93B2CF7929760B94006E1A23 /* KotlinGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF7629760B93006E1A23 /* KotlinGenerator.swift */; };
+		93B2CF7A29760B94006E1A23 /* StructGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF7729760B94006E1A23 /* StructGenerator.swift */; };
+		93B2CF8129760B9B006E1A23 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF7E29760B9A006E1A23 /* String+Utils.swift */; };
+		93B2CF8229760B9B006E1A23 /* DateFormatter+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF7B29760B9A006E1A23 /* DateFormatter+Types.swift */; };
+		93B2CF8329760B9B006E1A23 /* Array+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF8029760B9B006E1A23 /* Array+Utils.swift */; };
+		93B2CF8429760B9B006E1A23 /* Dictionary+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF7D29760B9A006E1A23 /* Dictionary+Utils.swift */; };
+		93B2CF8529760B9B006E1A23 /* Data+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF7C29760B9A006E1A23 /* Data+Utils.swift */; };
+		93B2CF8629760B9B006E1A23 /* Tree+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF7F29760B9B006E1A23 /* Tree+Debug.swift */; };
 		93F9E0E2297525B2009E3B27 /* WrapInLocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F9E0E1297525B2009E3B27 /* WrapInLocalizedString.swift */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +126,25 @@
 		93B2833B294AEDDD00364206 /* EditKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EditKit.entitlements; sourceTree = "<group>"; };
 		93B28346294AEE0200364206 /* EditorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorController.swift; sourceTree = "<group>"; };
 		93B2CF322975DA4E006E1A23 /* FormatAsMultiLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatAsMultiLine.swift; sourceTree = "<group>"; };
+		93B2CF352975FB52006E1A23 /* AutoMarkCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMarkCommand.swift; sourceTree = "<group>"; };
+		93B2CF4A2976094D006E1A23 /* ConvertJSONToCodableCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertJSONToCodableCommand.swift; sourceTree = "<group>"; };
+		93B2CF6529760B6E006E1A23 /* NodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeViewModel.swift; sourceTree = "<group>"; };
+		93B2CF6729760B77006E1A23 /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
+		93B2CF6829760B77006E1A23 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		93B2CF6B29760B7A006E1A23 /* Copyable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Copyable.swift; sourceTree = "<group>"; };
+		93B2CF6D29760B83006E1A23 /* GeneratorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorType.swift; sourceTree = "<group>"; };
+		93B2CF6E29760B83006E1A23 /* Primitive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Primitive.swift; sourceTree = "<group>"; };
+		93B2CF7129760B8B006E1A23 /* KotlinTypeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KotlinTypeHandler.swift; sourceTree = "<group>"; };
+		93B2CF7229760B8B006E1A23 /* SwiftTypeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTypeHandler.swift; sourceTree = "<group>"; };
+		93B2CF7529760B93006E1A23 /* SwiftGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGenerator.swift; sourceTree = "<group>"; };
+		93B2CF7629760B93006E1A23 /* KotlinGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KotlinGenerator.swift; sourceTree = "<group>"; };
+		93B2CF7729760B94006E1A23 /* StructGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructGenerator.swift; sourceTree = "<group>"; };
+		93B2CF7B29760B9A006E1A23 /* DateFormatter+Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Types.swift"; sourceTree = "<group>"; };
+		93B2CF7C29760B9A006E1A23 /* Data+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Utils.swift"; sourceTree = "<group>"; };
+		93B2CF7D29760B9A006E1A23 /* Dictionary+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Utils.swift"; sourceTree = "<group>"; };
+		93B2CF7E29760B9A006E1A23 /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		93B2CF7F29760B9B006E1A23 /* Tree+Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tree+Debug.swift"; sourceTree = "<group>"; };
+		93B2CF8029760B9B006E1A23 /* Array+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Utils.swift"; sourceTree = "<group>"; };
 		93F9E0E1297525B2009E3B27 /* WrapInLocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapInLocalizedString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -220,12 +258,14 @@
 				93B28338294AEDDD00364206 /* SourceEditorCommand.swift */,
 				93B28346294AEE0200364206 /* EditorController.swift */,
 				930CD09F294E456500F58F30 /* StripTrailingWhitespaceCommand.swift */,
+				93B2CF37297603DF006E1A23 /* Vendor */,
 				93B2CF342975E291006E1A23 /* Mine */,
 				932F4D8A294E4A8D00FA27CE /* FormatCodeForSharingCommand.swift */,
 				93B2CF322975DA4E006E1A23 /* FormatAsMultiLine.swift */,
 				932F4D8C294E4DC400FA27CE /* AutoCreateExtensionMarksCommand.swift */,
 				932F4D8E294E504300FA27CE /* SearchInCommand.swift */,
 				932F4D90294E538A00FA27CE /* WrapInIfDefCommand.swift */,
+				93B2CF352975FB52006E1A23 /* AutoMarkCommand.swift */,
 				93B2833B294AEDDD00364206 /* EditKit.entitlements */,
 				93B2833A294AEDDD00364206 /* Info.plist */,
 			);
@@ -239,6 +279,39 @@
 				932F4D88294E49A900FA27CE /* AlignAroundEqualsCommand.swift */,
 			);
 			path = Mine;
+			sourceTree = "<group>";
+		};
+		93B2CF37297603DF006E1A23 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				93B2CF562976096D006E1A23 /* JSON to Codable */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		93B2CF562976096D006E1A23 /* JSON to Codable */ = {
+			isa = PBXGroup;
+			children = (
+				93B2CF4A2976094D006E1A23 /* ConvertJSONToCodableCommand.swift */,
+				93B2CF6529760B6E006E1A23 /* NodeViewModel.swift */,
+				93B2CF6829760B77006E1A23 /* Node.swift */,
+				93B2CF6729760B77006E1A23 /* Tree.swift */,
+				93B2CF6B29760B7A006E1A23 /* Copyable.swift */,
+				93B2CF6D29760B83006E1A23 /* GeneratorType.swift */,
+				93B2CF6E29760B83006E1A23 /* Primitive.swift */,
+				93B2CF7129760B8B006E1A23 /* KotlinTypeHandler.swift */,
+				93B2CF7229760B8B006E1A23 /* SwiftTypeHandler.swift */,
+				93B2CF7629760B93006E1A23 /* KotlinGenerator.swift */,
+				93B2CF7529760B93006E1A23 /* SwiftGenerator.swift */,
+				93B2CF7729760B94006E1A23 /* StructGenerator.swift */,
+				93B2CF8029760B9B006E1A23 /* Array+Utils.swift */,
+				93B2CF7C29760B9A006E1A23 /* Data+Utils.swift */,
+				93B2CF7B29760B9A006E1A23 /* DateFormatter+Types.swift */,
+				93B2CF7D29760B9A006E1A23 /* Dictionary+Utils.swift */,
+				93B2CF7E29760B9A006E1A23 /* String+Utils.swift */,
+				93B2CF7F29760B9B006E1A23 /* Tree+Debug.swift */,
+			);
+			path = "JSON to Codable";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,14 +501,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93B2CF6629760B6E006E1A23 /* NodeViewModel.swift in Sources */,
+				93B2CF4B2976094D006E1A23 /* ConvertJSONToCodableCommand.swift in Sources */,
 				93B28337294AEDDD00364206 /* SourceEditorExtension.swift in Sources */,
 				932F4D8D294E4DC400FA27CE /* AutoCreateExtensionMarksCommand.swift in Sources */,
+				93B2CF6C29760B7A006E1A23 /* Copyable.swift in Sources */,
 				93B2CF332975DA4E006E1A23 /* FormatAsMultiLine.swift in Sources */,
+				93B2CF6A29760B77006E1A23 /* Tree.swift in Sources */,
+				93B2CF8429760B9B006E1A23 /* Dictionary+Utils.swift in Sources */,
+				93B2CF7929760B94006E1A23 /* KotlinGenerator.swift in Sources */,
+				93B2CF7329760B8B006E1A23 /* KotlinTypeHandler.swift in Sources */,
+				93B2CF362975FB52006E1A23 /* AutoMarkCommand.swift in Sources */,
+				93B2CF7429760B8B006E1A23 /* SwiftTypeHandler.swift in Sources */,
+				93B2CF7029760B83006E1A23 /* GeneratorType.swift in Sources */,
+				93B2CF7A29760B94006E1A23 /* StructGenerator.swift in Sources */,
+				93B2CF6929760B77006E1A23 /* Node.swift in Sources */,
 				932F4D91294E538A00FA27CE /* WrapInIfDefCommand.swift in Sources */,
+				93B2CF8129760B9B006E1A23 /* String+Utils.swift in Sources */,
+				93B2CF8629760B9B006E1A23 /* Tree+Debug.swift in Sources */,
 				93B28347294AEE0200364206 /* EditorController.swift in Sources */,
 				932F4D8B294E4A8D00FA27CE /* FormatCodeForSharingCommand.swift in Sources */,
+				93B2CF8229760B9B006E1A23 /* DateFormatter+Types.swift in Sources */,
+				93B2CF8329760B9B006E1A23 /* Array+Utils.swift in Sources */,
 				932F4D8F294E504300FA27CE /* SearchInCommand.swift in Sources */,
+				93B2CF6F29760B83006E1A23 /* Primitive.swift in Sources */,
+				93B2CF7829760B94006E1A23 /* SwiftGenerator.swift in Sources */,
 				932F4D89294E49A900FA27CE /* AlignAroundEqualsCommand.swift in Sources */,
+				93B2CF8529760B9B006E1A23 /* Data+Utils.swift in Sources */,
 				93F9E0E2297525B2009E3B27 /* WrapInLocalizedString.swift in Sources */,
 				93B28339294AEDDD00364206 /* SourceEditorCommand.swift in Sources */,
 				930CD0A0294E456500F58F30 /* StripTrailingWhitespaceCommand.swift in Sources */,

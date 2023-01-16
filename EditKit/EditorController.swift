@@ -23,6 +23,7 @@ struct EditorController {
         case searchOnGoogle = "EditKitPro.EditKit.SearchOnPlatform.Google"
         case searchOnStackOverflow = "EditKitPro.EditKit.SearchOnPlatform.StackOverflow"
         case searchOnGitHub = "EditKitPro.EditKit.SearchOnPlatform.GitHub"
+        case convertJSONtoCodable = "EditKitPro.EditKit.ConvertJSONToCodable"
 
 //        case deleteLines = "Thriller.Editor.DeleteLines";
 //        case duplicateLines = "Thriller.Editor.DuplicateLines";
@@ -83,7 +84,14 @@ struct EditorController {
                 // TODO: Handle errors eventually
             }
         case .autoCreateExtensionMarks:
-            AutoCreateExtensionMarksCommand.perform(with: invocation)
+            // TODO: This has potential, but you need to make sure it doesn't duplicate existing MARKS
+            // Maybe create an array of supported marks and then remove the ones that have been found
+            // The approach of finding the first line where the keyword apepars seems reasonable
+            // Maybe process needs to restart on every struct, enum, and class (v2?)
+            AutoMarkCommand().perform(with: invocation) { _ in
+                print("Done")
+            }
+//            AutoCreateExtensionMarksCommand.perform(with: invocation)
         case .wrapInIfDef:
             // MARK: DONE
             WrapInIfDefCommand.perform(with: invocation)
@@ -91,6 +99,10 @@ struct EditorController {
             WrapInLocalizedString.perform(with: invocation)
         case .searchOnGoogle, .searchOnStackOverflow, .searchOnGitHub:
             SearchOnPlatform().perform(with: invocation) { _ in
+                // TODO: Handle errors
+            }
+        case .convertJSONtoCodable:
+            ConvertJSONToCodableCommand().perform(with: invocation) { _ in
                 // TODO: Handle errors
             }
         }
