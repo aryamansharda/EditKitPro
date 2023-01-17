@@ -24,6 +24,8 @@ struct EditorController {
         case searchOnStackOverflow = "EditKitPro.EditKit.SearchOnPlatform.StackOverflow"
         case searchOnGitHub = "EditKitPro.EditKit.SearchOnPlatform.GitHub"
         case convertJSONtoCodable = "EditKitPro.EditKit.ConvertJSONToCodable"
+        case spellcheckComments = "EditKitPro.EditKit.SpellcheckComments"
+        case beautifyJSON = "EditKitPro.EditKit.BeautifyJSON"
 
 //        case deleteLines = "Thriller.Editor.DeleteLines";
 //        case duplicateLines = "Thriller.Editor.DuplicateLines";
@@ -96,7 +98,7 @@ struct EditorController {
             // MARK: DONE
             WrapInIfDefCommand.perform(with: invocation)
         case .wrapInLocalizedString:
-            WrapInLocalizedString.perform(with: invocation)
+            WrapInLocalizedStringCommand.perform(with: invocation)
         case .searchOnGoogle, .searchOnStackOverflow, .searchOnGitHub:
             SearchOnPlatform().perform(with: invocation) { _ in
                 // TODO: Handle errors
@@ -104,6 +106,14 @@ struct EditorController {
         case .convertJSONtoCodable:
             ConvertJSONToCodableCommand().perform(with: invocation) { _ in
                 // TODO: Handle errors
+            }
+        case .spellcheckComments:
+            SpellcheckCommentsCommand().perform(with: invocation) { _ in
+                // TODO: Handle errors
+            }
+        case .beautifyJSON:
+            BeautifyJSONCommand().perform(with: invocation) { _ in
+
             }
         }
     }

@@ -10,11 +10,6 @@ import XcodeKit
 
 class WrapInIfDefCommand {
     static func perform(with invocation: XCSourceEditorCommandInvocation) -> Void {
-
-        let path = FileManager.default.currentDirectoryPath
-        print("path = \(path)") 
-//        completionHandler(nil)
-
         let selections = invocation.buffer.selections as! [XCSourceTextRange]
         let selection = selections.first!
         let startIndex = selection.start.line

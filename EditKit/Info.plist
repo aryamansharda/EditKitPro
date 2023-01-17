@@ -112,6 +112,22 @@
 					<key>XCSourceEditorCommandName</key>
 					<string>Convert JSON to Codable</string>
 				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>EditKitPro.EditKit.SpellcheckComments</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Spellcheck Comments</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>EditKitPro.EditKit.BeautifyJSON</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Beautify JSON</string>
+				</dict>
 			</array>
 			<key>XCSourceEditorExtensionPrincipalClass</key>
 			<string>$(PRODUCT_MODULE_NAME).SourceEditorExtension</string>

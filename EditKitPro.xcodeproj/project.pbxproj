@@ -47,7 +47,10 @@
 		93B2CF8429760B9B006E1A23 /* Dictionary+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF7D29760B9A006E1A23 /* Dictionary+Utils.swift */; };
 		93B2CF8529760B9B006E1A23 /* Data+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF7C29760B9A006E1A23 /* Data+Utils.swift */; };
 		93B2CF8629760B9B006E1A23 /* Tree+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF7F29760B9B006E1A23 /* Tree+Debug.swift */; };
-		93F9E0E2297525B2009E3B27 /* WrapInLocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F9E0E1297525B2009E3B27 /* WrapInLocalizedString.swift */; };
+		93B2CF8929761C05006E1A23 /* SpellcheckCommentsCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF8729761C05006E1A23 /* SpellcheckCommentsCommand.swift */; };
+		93B2CF8A29761C05006E1A23 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF8829761C05006E1A23 /* Parser.swift */; };
+		93B2CF8D29761F0E006E1A23 /* BeautifyJSONCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF8C29761F0E006E1A23 /* BeautifyJSONCommand.swift */; };
+		93F9E0E2297525B2009E3B27 /* WrapInLocalizedStringCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F9E0E1297525B2009E3B27 /* WrapInLocalizedStringCommand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,7 +148,10 @@
 		93B2CF7E29760B9A006E1A23 /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 		93B2CF7F29760B9B006E1A23 /* Tree+Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tree+Debug.swift"; sourceTree = "<group>"; };
 		93B2CF8029760B9B006E1A23 /* Array+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Utils.swift"; sourceTree = "<group>"; };
-		93F9E0E1297525B2009E3B27 /* WrapInLocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapInLocalizedString.swift; sourceTree = "<group>"; };
+		93B2CF8729761C05006E1A23 /* SpellcheckCommentsCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpellcheckCommentsCommand.swift; sourceTree = "<group>"; };
+		93B2CF8829761C05006E1A23 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		93B2CF8C29761F0E006E1A23 /* BeautifyJSONCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautifyJSONCommand.swift; sourceTree = "<group>"; };
+		93F9E0E1297525B2009E3B27 /* WrapInLocalizedStringCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapInLocalizedStringCommand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,8 +281,9 @@
 		93B2CF342975E291006E1A23 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
-				93F9E0E1297525B2009E3B27 /* WrapInLocalizedString.swift */,
+				93F9E0E1297525B2009E3B27 /* WrapInLocalizedStringCommand.swift */,
 				932F4D88294E49A900FA27CE /* AlignAroundEqualsCommand.swift */,
+				93B2CF8C29761F0E006E1A23 /* BeautifyJSONCommand.swift */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -284,6 +291,7 @@
 		93B2CF37297603DF006E1A23 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				93B2CF8B29761C08006E1A23 /* Spellcheck Comments */,
 				93B2CF562976096D006E1A23 /* JSON to Codable */,
 			);
 			path = Vendor;
@@ -312,6 +320,15 @@
 				93B2CF7F29760B9B006E1A23 /* Tree+Debug.swift */,
 			);
 			path = "JSON to Codable";
+			sourceTree = "<group>";
+		};
+		93B2CF8B29761C08006E1A23 /* Spellcheck Comments */ = {
+			isa = PBXGroup;
+			children = (
+				93B2CF8829761C05006E1A23 /* Parser.swift */,
+				93B2CF8729761C05006E1A23 /* SpellcheckCommentsCommand.swift */,
+			);
+			path = "Spellcheck Comments";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -509,17 +526,20 @@
 				93B2CF332975DA4E006E1A23 /* FormatAsMultiLine.swift in Sources */,
 				93B2CF6A29760B77006E1A23 /* Tree.swift in Sources */,
 				93B2CF8429760B9B006E1A23 /* Dictionary+Utils.swift in Sources */,
+				93B2CF8D29761F0E006E1A23 /* BeautifyJSONCommand.swift in Sources */,
 				93B2CF7929760B94006E1A23 /* KotlinGenerator.swift in Sources */,
 				93B2CF7329760B8B006E1A23 /* KotlinTypeHandler.swift in Sources */,
 				93B2CF362975FB52006E1A23 /* AutoMarkCommand.swift in Sources */,
 				93B2CF7429760B8B006E1A23 /* SwiftTypeHandler.swift in Sources */,
 				93B2CF7029760B83006E1A23 /* GeneratorType.swift in Sources */,
+				93B2CF8929761C05006E1A23 /* SpellcheckCommentsCommand.swift in Sources */,
 				93B2CF7A29760B94006E1A23 /* StructGenerator.swift in Sources */,
 				93B2CF6929760B77006E1A23 /* Node.swift in Sources */,
 				932F4D91294E538A00FA27CE /* WrapInIfDefCommand.swift in Sources */,
 				93B2CF8129760B9B006E1A23 /* String+Utils.swift in Sources */,
 				93B2CF8629760B9B006E1A23 /* Tree+Debug.swift in Sources */,
 				93B28347294AEE0200364206 /* EditorController.swift in Sources */,
+				93B2CF8A29761C05006E1A23 /* Parser.swift in Sources */,
 				932F4D8B294E4A8D00FA27CE /* FormatCodeForSharingCommand.swift in Sources */,
 				93B2CF8229760B9B006E1A23 /* DateFormatter+Types.swift in Sources */,
 				93B2CF8329760B9B006E1A23 /* Array+Utils.swift in Sources */,
@@ -528,7 +548,7 @@
 				93B2CF7829760B94006E1A23 /* SwiftGenerator.swift in Sources */,
 				932F4D89294E49A900FA27CE /* AlignAroundEqualsCommand.swift in Sources */,
 				93B2CF8529760B9B006E1A23 /* Data+Utils.swift in Sources */,
-				93F9E0E2297525B2009E3B27 /* WrapInLocalizedString.swift in Sources */,
+				93F9E0E2297525B2009E3B27 /* WrapInLocalizedStringCommand.swift in Sources */,
 				93B28339294AEDDD00364206 /* SourceEditorCommand.swift in Sources */,
 				930CD0A0294E456500F58F30 /* StripTrailingWhitespaceCommand.swift in Sources */,
 			);

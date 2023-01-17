@@ -8,7 +8,7 @@
 import Foundation
 import XcodeKit
 
-class WrapInLocalizedString  {
+class WrapInLocalizedStringCommand  {
     static func perform(with invocation: XCSourceEditorCommandInvocation) {
 
         // Ensure a selection is provided
