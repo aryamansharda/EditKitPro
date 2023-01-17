@@ -128,6 +128,14 @@
 					<key>XCSourceEditorCommandName</key>
 					<string>Beautify JSON</string>
 				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>EditKitPro.EditKit.CreateTypeDefinition</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Create Type Defintion</string>
+				</dict>
 			</array>
 			<key>XCSourceEditorExtensionPrincipalClass</key>
 			<string>$(PRODUCT_MODULE_NAME).SourceEditorExtension</string>

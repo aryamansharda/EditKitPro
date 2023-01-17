@@ -50,6 +50,7 @@
 		93B2CF8929761C05006E1A23 /* SpellcheckCommentsCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF8729761C05006E1A23 /* SpellcheckCommentsCommand.swift */; };
 		93B2CF8A29761C05006E1A23 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF8829761C05006E1A23 /* Parser.swift */; };
 		93B2CF8D29761F0E006E1A23 /* BeautifyJSONCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF8C29761F0E006E1A23 /* BeautifyJSONCommand.swift */; };
+		93B2CF8F29762854006E1A23 /* CreateTypeDefinitionCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF8E29762854006E1A23 /* CreateTypeDefinitionCommand.swift */; };
 		93F9E0E2297525B2009E3B27 /* WrapInLocalizedStringCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F9E0E1297525B2009E3B27 /* WrapInLocalizedStringCommand.swift */; };
 /* End PBXBuildFile section */
 
@@ -151,6 +152,7 @@
 		93B2CF8729761C05006E1A23 /* SpellcheckCommentsCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpellcheckCommentsCommand.swift; sourceTree = "<group>"; };
 		93B2CF8829761C05006E1A23 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		93B2CF8C29761F0E006E1A23 /* BeautifyJSONCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautifyJSONCommand.swift; sourceTree = "<group>"; };
+		93B2CF8E29762854006E1A23 /* CreateTypeDefinitionCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTypeDefinitionCommand.swift; sourceTree = "<group>"; };
 		93F9E0E1297525B2009E3B27 /* WrapInLocalizedStringCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapInLocalizedStringCommand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -272,6 +274,7 @@
 				932F4D8E294E504300FA27CE /* SearchInCommand.swift */,
 				932F4D90294E538A00FA27CE /* WrapInIfDefCommand.swift */,
 				93B2CF352975FB52006E1A23 /* AutoMarkCommand.swift */,
+				93B2CF8E29762854006E1A23 /* CreateTypeDefinitionCommand.swift */,
 				93B2833B294AEDDD00364206 /* EditKit.entitlements */,
 				93B2833A294AEDDD00364206 /* Info.plist */,
 			);
@@ -532,6 +535,7 @@
 				93B2CF362975FB52006E1A23 /* AutoMarkCommand.swift in Sources */,
 				93B2CF7429760B8B006E1A23 /* SwiftTypeHandler.swift in Sources */,
 				93B2CF7029760B83006E1A23 /* GeneratorType.swift in Sources */,
+				93B2CF8F29762854006E1A23 /* CreateTypeDefinitionCommand.swift in Sources */,
 				93B2CF8929761C05006E1A23 /* SpellcheckCommentsCommand.swift in Sources */,
 				93B2CF7A29760B94006E1A23 /* StructGenerator.swift in Sources */,
 				93B2CF6929760B77006E1A23 /* Node.swift in Sources */,

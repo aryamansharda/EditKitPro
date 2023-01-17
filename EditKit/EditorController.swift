@@ -26,6 +26,7 @@ struct EditorController {
         case convertJSONtoCodable = "EditKitPro.EditKit.ConvertJSONToCodable"
         case spellcheckComments = "EditKitPro.EditKit.SpellcheckComments"
         case beautifyJSON = "EditKitPro.EditKit.BeautifyJSON"
+        case createTypeDefinition = "EditKitPro.EditKit.CreateTypeDefinition"
 
 //        case deleteLines = "Thriller.Editor.DeleteLines";
 //        case duplicateLines = "Thriller.Editor.DuplicateLines";
@@ -114,6 +115,10 @@ struct EditorController {
         case .beautifyJSON:
             BeautifyJSONCommand().perform(with: invocation) { _ in
 
+            }
+        case .createTypeDefinition:
+            CreateTypeDefinitionCommand().perform(with: invocation) { _ in
+                // TODO: Handle errors
             }
         }
     }
