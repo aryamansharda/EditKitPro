@@ -116,14 +116,6 @@
 					<key>XCSourceEditorCommandClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>EditKitPro.EditKit.SpellcheckComments</string>
-					<key>XCSourceEditorCommandName</key>
-					<string>Spellcheck Comments</string>
-				</dict>
-				<dict>
-					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
-					<key>XCSourceEditorCommandIdentifier</key>
 					<string>EditKitPro.EditKit.BeautifyJSON</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>Beautify JSON</string>
