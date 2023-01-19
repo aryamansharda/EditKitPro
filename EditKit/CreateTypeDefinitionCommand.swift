@@ -41,6 +41,7 @@ private enum UIKitClass: String {
     case view = "UIView"
     case button = "UIButton"
     case viewController = "UIViewController"
+    case tableViewController = "UITableViewController"
     case tableView = "UITableView"
     case tableViewCell = "UITableViewCell"
     case collectionView = "UICollectionView"
@@ -53,7 +54,9 @@ private enum UIKitClass: String {
         case .button:
             return ["Button", "button"]
         case .viewController:
-            return ["Controller"]
+            return ["ViewController"]
+        case .tableViewController:
+            return ["TableViewController"]
         case .tableView:
             return ["TableView"]
         case .tableViewCell:
@@ -67,7 +70,7 @@ private enum UIKitClass: String {
 
     static func detectSuperclass(forTypeName name: String) -> UIKitClass? {
         // check tableViewCell after collectionViewCell to give it a chance to be detected
-        let candidates: [UIKitClass] = [.view, .button, .viewController, .tableView,
+        let candidates: [UIKitClass] = [.view, .button, .tableViewController, .viewController, .tableView,
                                         .collectionViewCell, .collectionView, .tableViewCell]
         return candidates.findFirstOccurence {
             return $0.detectedEndings.findFirstOccurence { name.hasSuffix($0) } != nil
