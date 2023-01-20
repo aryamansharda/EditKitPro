@@ -59,7 +59,6 @@ class XcodeLines: NSObject, XCSourceEditorCommand {
             if line.contains("{") { b += 1 }
             if line.contains("}") { b -= 1 }
             if b == 0 {
-                print("found line: \(line)\nb: \(b) c: \(c + 5)")
                 return c
             }
             c += 1

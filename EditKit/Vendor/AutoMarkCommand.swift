@@ -17,13 +17,14 @@ class AutoMarkCommand: NSObject, XCSourceEditorCommand {
         var lineInitializersMark:Int?
         var lineIBActionMark:Int?
         var linePrivateMethodMark:Int?
+        var linePublicMethodMark:Int?
         var lineExtensionMark:Int?
 
         for i in 0..<invocation.buffer.lines.count {
 
-            let line = invocation.buffer.lines[i] as! String
+            let line = (invocation.buffer.lines[i] as! String).trimmingCharacters(in: .whitespacesAndNewlines)
 
-            if line.contains("class") || line.contains("struct") || line.contains("enum") {
+            if (line.contains("class") || line.contains("struct") || line.contains("enum")) {
                 lineClassMark = i
             }
 
@@ -47,21 +48,21 @@ class AutoMarkCommand: NSObject, XCSourceEditorCommand {
 
             }
 
-            if line.contains("init(") && lineInitializersMark == nil  {
+            if (line.hasPrefix("init(") || line.hasPrefix("required init(") || line.hasPrefix("override init(")) && lineInitializersMark == nil && lineClassMark != nil {
 
                 invocation.buffer.lines.insert("    //MARK: - Initializers", at: i)
                 lineInitializersMark = i
 
             }
 
-            if line.contains("IBOutlet") && lineIBOutletMark == nil  {
+            if line.hasPrefix("@IBOutlet") && lineIBOutletMark == nil && lineClassMark != nil {
 
                 invocation.buffer.lines.insert("    //MARK: - IBOutlets", at: i)
                 lineIBOutletMark = i
 
             }
 
-            if line.contains("viewDidLoad") && lineViewDidLoadMark == nil  {
+            if line.contains("viewDidLoad") && lineViewDidLoadMark == nil && lineClassMark != nil {
 
                 invocation.buffer.lines.insert("    //MARK: - View Lifecycle", at: i)
                 lineViewDidLoadMark = i-1
@@ -69,37 +70,33 @@ class AutoMarkCommand: NSObject, XCSourceEditorCommand {
 
             }
 
-            if line.contains("IBAction") && lineIBActionMark == nil  {
+            if line.hasPrefix("@IBAction") && lineIBActionMark == nil  && lineClassMark != nil {
 
                 invocation.buffer.lines.insert("    //MARK: - IBActions", at: i)
                 lineIBActionMark = i
 
             }
 
-            if line.contains("private func") && linePrivateMethodMark == nil  {
+            if line.contains("private func") && linePrivateMethodMark == nil && lineClassMark != nil {
 
                 invocation.buffer.lines.insert("    //MARK: - Private Methods", at: i)
                 linePrivateMethodMark = i
 
             }
 
-            if line.contains("extension") && lineExtensionMark == nil {
+            if (line.hasPrefix("func") || line.hasPrefix("@objc func") || line.hasPrefix("override func")) && linePublicMethodMark == nil && lineClassMark != nil {
+
+                invocation.buffer.lines.insert("    //MARK: - Public Methods", at: i)
+                linePublicMethodMark = i
+
+            }
+
+            if line.hasPrefix("extension") && lineExtensionMark == nil {
 
                 invocation.buffer.lines.insert("//MARK: - Extensions", at: i)
                 lineExtensionMark = i
 
             }
-
-        }
-
-        if linePropertieMark == 0 && lineIBOutletMark == nil {
-
-            invocation.buffer.lines.insert("    //MARK: - Properties", at: lineClassMark!+2)
-            linePropertieMark = lineClassMark!+2
-            invocation.buffer.lines.insert("", at: linePropertieMark!+1)
-            invocation.buffer.lines.insert("", at: linePropertieMark!+1)
-            invocation.buffer.lines.insert("    //MARK: - IBOutlets", at: linePropertieMark!+2)
-            lineIBOutletMark = linePropertieMark!+2
 
         }
 
