@@ -10,42 +10,91 @@ import XcodeKit
 
 class AutoMarkCommand: NSObject, XCSourceEditorCommand {
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
-        var lineClassMark:Int?
-        var linePropertieMark:Int?
-        var lineIBOutletMark:Int?
-        var lineViewDidLoadMark:Int?
-        var lineInitializersMark:Int?
-        var lineIBActionMark:Int?
-        var linePrivateMethodMark:Int?
-        var linePublicMethodMark:Int?
-        var lineExtensionMark:Int?
+        var lineClassMark: Int?
+        var linePropertieMark: Int?
+        var lineIBOutletMark: Int?
+        var lineViewDidLoadMark: Int?
+        var lineInitializersMark: Int?
+        var lineIBActionMark: Int?
+        var linePrivateMethodMark: Int?
+        var linePublicMethodMark: Int?
+        var lineExtensionMark: Int?
 
+        func checkForExistingMarks() {
+            let allLines = invocation.buffer.lines.map { $0 as! String }.joined()
+
+            if allLines.contains("MARK: - IBOutlets") {
+                lineIBOutletMark = 0
+            }
+
+
+            if allLines.contains("MARK: - Properties") {
+                linePropertieMark = 0
+            }
+
+            if allLines.contains("MARK: - Initializers") {
+                lineInitializersMark = 0
+            }
+
+            if allLines.contains("MARK: - IBOutlets") {
+                lineIBOutletMark = 0
+            }
+
+            if allLines.contains("MARK: - View Lifecycle") {
+                lineViewDidLoadMark = 0
+            }
+
+            if allLines.contains("MARK: - IBActions") {
+                lineIBActionMark = 0
+            }
+
+            if allLines.contains("MARK: - Private Methods") {
+                linePrivateMethodMark = 0
+            }
+
+            if allLines.contains("MARK: - Public Methods") {
+                linePublicMethodMark = 0
+            }
+
+            if allLines.contains("MARK: - Extensions") {
+                lineExtensionMark = 0
+            }
+
+        }
+
+        checkForExistingMarks()
+
+        // Find the main entity first
         for i in 0..<invocation.buffer.lines.count {
-
             let line = (invocation.buffer.lines[i] as! String).trimmingCharacters(in: .whitespacesAndNewlines)
-
             if (line.contains("class") || line.contains("struct") || line.contains("enum")) {
                 lineClassMark = i
             }
+        }
 
-            if (line.contains("var") || line.contains("let")) && linePropertieMark == nil && lineClassMark != nil {
+        for i in lineClassMark!..<invocation.buffer.lines.count {
 
-                if line.contains("IBOutlet") && lineIBOutletMark == nil  {
+            let line = (invocation.buffer.lines[i] as! String).trimmingCharacters(in: .whitespacesAndNewlines)
 
-                    if !(invocation.buffer.lines[i] as! String).contains("MARK: - IBOutlets") {
-                        invocation.buffer.lines.insert("    //MARK: - IBOutlets", at: i)
-                    }
+            if line.hasPrefix("//") {
+                continue
+            }
 
-                    lineIBOutletMark = i
-                    linePropertieMark = 0
+            let variableTypes = ["static var", "static let", "private var", "private let", "public var", "public let", "internal var", "internal let", "lazy var"]
+            let matchingVariable = variableTypes.first { candidate in
+                line.contains(candidate)
+            }
 
-                } else {
+            if line.contains("IBOutlet") && lineIBOutletMark == nil {
+                invocation.buffer.lines.insert("    //MARK: - IBOutlets", at: i)
+                lineIBOutletMark = i
+                continue
+            }
 
-                    invocation.buffer.lines.insert("    //MARK: - Properties", at: i)
-                    linePropertieMark = i
-
-                }
-
+            if (matchingVariable != nil && !line.contains("IBOutlet")) && linePropertieMark == nil && lineClassMark != nil {
+                invocation.buffer.lines.insert("    //MARK: - Properties", at: i)
+                linePropertieMark = i
+                continue
             }
 
             if (line.hasPrefix("init(") || line.hasPrefix("required init(") || line.hasPrefix("override init(")) && lineInitializersMark == nil && lineClassMark != nil {
