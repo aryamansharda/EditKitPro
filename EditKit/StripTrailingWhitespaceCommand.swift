@@ -39,6 +39,5 @@ class StripTrailingWhitespaceCommand  {
 
         // Set selections then return with no error.
         invocation.buffer.selections.setArray(updatedSelections)
-        print("Done")
     }
 }

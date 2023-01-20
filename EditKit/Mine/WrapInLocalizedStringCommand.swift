@@ -33,7 +33,7 @@ class WrapInLocalizedStringCommand  {
                     // Extract the substring matching the capture group
                     if let substringRange = Range(match.range, in: originalLine) {
                         let quotedText = String(originalLine[substringRange])
-                        let localizedStringTemplate = "NSLocalizedString(<#T##String#>, value: \(quotedText), comment: \(quotedText)"
+                        let localizedStringTemplate = "NSLocalizedString(<#T##String#>, value: \(quotedText), comment: \(quotedText))"
                         modifiedLine = modifiedLine.replacingOccurrences(of: quotedText, with: localizedStringTemplate)
                     }
                 }

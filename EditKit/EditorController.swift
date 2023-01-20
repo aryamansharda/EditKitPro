@@ -11,61 +11,49 @@ import AppKit
 struct EditorController {
 
     enum EditorCommandIdentifier: String {
-        case sortLines = "EditKitPro.EditKit.SortLines"
-        case sortLinesByLength = "EditKitPro.EditKit.SortLinesByLength"
-        case stripTrailingWhitespaceInFile = "EditKitPro.EditKit.StripTrailingWhitespaceInFile"
-        case alignAroundEquals = "EditKitPro.EditKit.AlignAroundEquals"
-        case formatCodeForSharing = "EditKitPro.EditKit.FormatCodeForSharing"
-        case formatAsMultiLine = "EditKitPro.EditKit.FormatAsMultiLine"
-        case autoCreateExtensionMarks = "EditKitPro.EditKit.AutoCreateExtensionMarks"
-        case wrapInIfDef = "EditKitPro.EditKit.WrapInIfDef"
-        case wrapInLocalizedString = "EditKitPro.EditKit.WrapInLocalizedString"
-        case searchOnGoogle = "EditKitPro.EditKit.SearchOnPlatform.Google"
-        case searchOnStackOverflow = "EditKitPro.EditKit.SearchOnPlatform.StackOverflow"
-        case searchOnGitHub = "EditKitPro.EditKit.SearchOnPlatform.GitHub"
-        case convertJSONtoCodable = "EditKitPro.EditKit.ConvertJSONToCodable"
-        case beautifyJSON = "EditKitPro.EditKit.BeautifyJSON"
-        case createTypeDefinition = "EditKitPro.EditKit.CreateTypeDefinition"
-
-//        case deleteLines = "Thriller.Editor.DeleteLines";
-//        case duplicateLines = "Thriller.Editor.DuplicateLines";
-//        case copyLines = "Thriller.Editor.CopyLines";
-//        case blockComment = "Thriller.Editor.BlockComment";
-//        case convertJson = "Thriller.Editor.ConvertJsonToModel";
-//        case convertProtobuf = "Thriller.Editor.ConvertProtobufToModel";
-
-        // TODO: - sort import <>, "", oc, swift
-        // TODO: - auto import anywhere
-        // TODO: - generate sel interface oc, swift
-        // TODO: - generate sel imp with select codes oc, swift
-        // TODO: - generate statement with select expression oc, swift
-
-        // TODO: - common wapper
-        // TODO: - blcok common (wraps in /* and */
-
-        // TODO: - alignment
-        // TODO: - format
-
-        // TODO: - upper case
-        // TODO: - lower case
-
-        // TODO: - need comment or not
-        // TODO: - prefix support
-
-        // Is upper case, lower case, starting block comments above really helpful?
+        case alignAroundEquals              = "EditKitPro.EditKit.AlignAroundEquals"
+        case autoCreateExtensionMarks       = "EditKitPro.EditKit.AutoCreateExtensionMarks"
+        case beautifyJSON                   = "EditKitPro.EditKit.BeautifyJSON"
+        case convertJSONtoCodable           = "EditKitPro.EditKit.ConvertJSONToCodable"
+        case createTypeDefinition           = "EditKitPro.EditKit.CreateTypeDefinition"
+        case formatAsMultiLine              = "EditKitPro.EditKit.FormatAsMultiLine"
+        case formatCodeForSharing           = "EditKitPro.EditKit.FormatCodeForSharing"
+        case searchOnGitHub                 = "EditKitPro.EditKit.SearchOnPlatform.GitHub"
+        case searchOnGoogle                 = "EditKitPro.EditKit.SearchOnPlatform.Google"
+        case searchOnStackOverflow          = "EditKitPro.EditKit.SearchOnPlatform.StackOverflow"
+        case sortImports                    = "EditKitPro.EditKit.SortImports"
+        case sortLinesAlphabetically        = "EditKitPro.EditKit.SortLinesAlphabetically"
+        case disableOuterView              = "EditKitPro.EditKit.DisableOuterView"
+        case disableView              = "EditKitPro.EditKit.DisableView"
+        case deleteOuterView              = "EditKitPro.EditKit.DeleteOuterView"
+        case deleteView              = "EditKitPro.EditKit.DeleteView"
+        case sortLinesByLength              = "EditKitPro.EditKit.SortLinesByLength"
+        case stripTrailingWhitespaceInFile  = "EditKitPro.EditKit.StripTrailingWhitespaceInFile"
+        case wrapInIfDef                    = "EditKitPro.EditKit.WrapInIfDef"
+        case wrapInLocalizedString          = "EditKitPro.EditKit.WrapInLocalizedString"
     }
 
-    /// handle all editor command
     static func handle(with invocation: XCSourceEditorCommandInvocation, completionHandler: ((Error?) -> Void)?) {
 
         // Fail fast if there is no text selected at all or there is no text in the file
         guard let commandIdentifier = EditorCommandIdentifier(rawValue: invocation.commandIdentifier) else { return }
 
         switch commandIdentifier {
-        case .sortLines:
-            print("Sort Lines")
+        case .sortImports:
+            // MARK: DONE
+            ImportSorter().perform(with: invocation) { _ in
+                print("Error")
+            }
         case .sortLinesByLength:
-            print("Sort Lines By Length")
+            // MARK: DONE
+            SortSelectedLinesByLength().perform(with: invocation) { _ in
+                print("Error")
+            }
+        case .sortLinesAlphabetically:
+            // MARK: DONE
+            SortSelectedLinesByAlphabetically().perform(with: invocation) { _ in
+                print("Error")
+            }
         case .stripTrailingWhitespaceInFile:
             StripTrailingWhitespaceCommand.perform(with: invocation)
         case .alignAroundEquals:
@@ -89,31 +77,55 @@ struct EditorController {
             // TODO: This has potential, but you need to make sure it doesn't duplicate existing MARKS
             // Maybe create an array of supported marks and then remove the ones that have been found
             // The approach of finding the first line where the keyword apepars seems reasonable
-            // Maybe process needs to restart on every struct, enum, and class (v2?)
+            // Maybe process needs to rest nart on every struct, enum, and class (v2?)
             AutoMarkCommand().perform(with: invocation) { _ in
                 print("Done")
             }
-//            AutoCreateExtensionMarksCommand.perform(with: invocation)
         case .wrapInIfDef:
             // MARK: DONE
             WrapInIfDefCommand.perform(with: invocation)
         case .wrapInLocalizedString:
+            // MARK: DONE
             WrapInLocalizedStringCommand.perform(with: invocation)
         case .searchOnGoogle, .searchOnStackOverflow, .searchOnGitHub:
+            // MARK: DONE
             SearchOnPlatform().perform(with: invocation) { _ in
                 // TODO: Handle errors
             }
         case .convertJSONtoCodable:
+            // MARK: DONE
             ConvertJSONToCodableCommand().perform(with: invocation) { _ in
                 // TODO: Handle errors
             }
         case .beautifyJSON:
+            // MARK: DONE
             BeautifyJSONCommand().perform(with: invocation) { _ in
 
             }
         case .createTypeDefinition:
+            // MARK: DONE
             CreateTypeDefinitionCommand().perform(with: invocation) { _ in
                 // TODO: Handle errors
+            }
+        case .disableView:
+            // MARK: DONE
+            ToggleBraceLines().perform(with: invocation) { _ in
+                invocation.buffer.selections.removeAllObjects()
+            }
+        case .disableOuterView:
+            // MARK: DONE
+            ToggleBraceLine().perform(with: invocation) { _ in
+                invocation.buffer.selections.removeAllObjects()
+            }
+        case .deleteOuterView:
+            // MARK: DONE
+            RemoveBraceLine().perform(with: invocation) { _ in
+                invocation.buffer.selections.removeAllObjects()
+            }
+        case .deleteView:
+            // MARK: DONE
+            RemoveBraceLines().perform(with: invocation) { _ in
+                invocation.buffer.selections.removeAllObjects()
             }
         }
     }

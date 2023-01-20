@@ -13,6 +13,26 @@
 		932F4D8D294E4DC400FA27CE /* AutoCreateExtensionMarksCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4D8C294E4DC400FA27CE /* AutoCreateExtensionMarksCommand.swift */; };
 		932F4D8F294E504300FA27CE /* SearchInCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4D8E294E504300FA27CE /* SearchInCommand.swift */; };
 		932F4D91294E538A00FA27CE /* WrapInIfDefCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4D90294E538A00FA27CE /* WrapInIfDefCommand.swift */; };
+		9378B83F297A16F200C12050 /* CountableClosedRange+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9378B83E297A16F200C12050 /* CountableClosedRange+Extension.swift */; };
+		9378B841297A16F900C12050 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9378B840297A16F900C12050 /* String+Extension.swift */; };
+		9378B843297A170100C12050 /* ImportSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9378B842297A170100C12050 /* ImportSorter.swift */; };
+		9378B847297A170D00C12050 /* SortSelectedLinesByLenght.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9378B844297A170D00C12050 /* SortSelectedLinesByLenght.swift */; };
+		9378B848297A170D00C12050 /* SortSelectedRangeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9378B845297A170D00C12050 /* SortSelectedRangeList.swift */; };
+		9378B849297A170D00C12050 /* SortSelectedLinesByAlphabetically.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9378B846297A170D00C12050 /* SortSelectedLinesByAlphabetically.swift */; };
+		9378B84B297A178200C12050 /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9378B84A297A178200C12050 /* Sort.swift */; };
+		9378B84E297A2C2F00C12050 /* FormatLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9378B84D297A2C2F00C12050 /* FormatLines.swift */; };
+		9378B852297A2C3600C12050 /* ToggleBraceLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9378B84F297A2C3600C12050 /* ToggleBraceLines.swift */; };
+		9378B853297A2C3600C12050 /* ToggleBraceLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9378B850297A2C3600C12050 /* ToggleBraceLine.swift */; };
+		9378B854297A2C3600C12050 /* XcodeLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9378B851297A2C3600C12050 /* XcodeLines.swift */; };
+		9378B85B297A362E00C12050 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9378B855297A362E00C12050 /* Parser.swift */; };
+		9378B85C297A362E00C12050 /* Indent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9378B856297A362E00C12050 /* Indent.swift */; };
+		9378B85D297A362E00C12050 /* FormatError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9378B857297A362E00C12050 /* FormatError.swift */; };
+		9378B85E297A362E00C12050 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9378B858297A362E00C12050 /* Preferences.swift */; };
+		9378B85F297A362E00C12050 /* SwiftParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9378B859297A362E00C12050 /* SwiftParser.swift */; };
+		9378B860297A362E00C12050 /* Pref.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9378B85A297A362E00C12050 /* Pref.swift */; };
+		9378B866297A364200C12050 /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9378B863297A364200C12050 /* ExtensionString.swift */; };
+		9378B867297A364200C12050 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9378B864297A364200C12050 /* Extension.swift */; };
+		9378B868297A364200C12050 /* ExtensionChar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9378B865297A364200C12050 /* ExtensionChar.swift */; };
 		93B28301294AEDD200364206 /* EditKitProApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B28300294AEDD200364206 /* EditKitProApp.swift */; };
 		93B28303294AEDD200364206 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B28302294AEDD200364206 /* ContentView.swift */; };
 		93B28305294AEDD200364206 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93B28304294AEDD200364206 /* Assets.xcassets */; };
@@ -108,6 +128,26 @@
 		932F4D8C294E4DC400FA27CE /* AutoCreateExtensionMarksCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCreateExtensionMarksCommand.swift; sourceTree = "<group>"; };
 		932F4D8E294E504300FA27CE /* SearchInCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInCommand.swift; sourceTree = "<group>"; };
 		932F4D90294E538A00FA27CE /* WrapInIfDefCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapInIfDefCommand.swift; sourceTree = "<group>"; };
+		9378B83E297A16F200C12050 /* CountableClosedRange+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CountableClosedRange+Extension.swift"; sourceTree = "<group>"; };
+		9378B840297A16F900C12050 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		9378B842297A170100C12050 /* ImportSorter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportSorter.swift; sourceTree = "<group>"; };
+		9378B844297A170D00C12050 /* SortSelectedLinesByLenght.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortSelectedLinesByLenght.swift; sourceTree = "<group>"; };
+		9378B845297A170D00C12050 /* SortSelectedRangeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortSelectedRangeList.swift; sourceTree = "<group>"; };
+		9378B846297A170D00C12050 /* SortSelectedLinesByAlphabetically.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortSelectedLinesByAlphabetically.swift; sourceTree = "<group>"; };
+		9378B84A297A178200C12050 /* Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
+		9378B84D297A2C2F00C12050 /* FormatLines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatLines.swift; sourceTree = "<group>"; };
+		9378B84F297A2C3600C12050 /* ToggleBraceLines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleBraceLines.swift; sourceTree = "<group>"; };
+		9378B850297A2C3600C12050 /* ToggleBraceLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleBraceLine.swift; sourceTree = "<group>"; };
+		9378B851297A2C3600C12050 /* XcodeLines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeLines.swift; sourceTree = "<group>"; };
+		9378B855297A362E00C12050 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		9378B856297A362E00C12050 /* Indent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Indent.swift; sourceTree = "<group>"; };
+		9378B857297A362E00C12050 /* FormatError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatError.swift; sourceTree = "<group>"; };
+		9378B858297A362E00C12050 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		9378B859297A362E00C12050 /* SwiftParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftParser.swift; sourceTree = "<group>"; };
+		9378B85A297A362E00C12050 /* Pref.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pref.swift; sourceTree = "<group>"; };
+		9378B863297A364200C12050 /* ExtensionString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
+		9378B864297A364200C12050 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		9378B865297A364200C12050 /* ExtensionChar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionChar.swift; sourceTree = "<group>"; };
 		93B282FD294AEDD200364206 /* EditKitPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EditKitPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93B28300294AEDD200364206 /* EditKitProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditKitProApp.swift; sourceTree = "<group>"; };
 		93B28302294AEDD200364206 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -186,6 +226,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9378B83D297A16D700C12050 /* Sort Lines and Imports */ = {
+			isa = PBXGroup;
+			children = (
+				9378B83E297A16F200C12050 /* CountableClosedRange+Extension.swift */,
+				9378B840297A16F900C12050 /* String+Extension.swift */,
+				9378B846297A170D00C12050 /* SortSelectedLinesByAlphabetically.swift */,
+				9378B844297A170D00C12050 /* SortSelectedLinesByLenght.swift */,
+				9378B845297A170D00C12050 /* SortSelectedRangeList.swift */,
+				9378B84A297A178200C12050 /* Sort.swift */,
+				9378B842297A170100C12050 /* ImportSorter.swift */,
+			);
+			path = "Sort Lines and Imports";
+			sourceTree = "<group>";
+		};
+		9378B84C297A243400C12050 /* SwiftUI View Operations */ = {
+			isa = PBXGroup;
+			children = (
+				9378B861297A363300C12050 /* Parser */,
+				9378B84D297A2C2F00C12050 /* FormatLines.swift */,
+				9378B850297A2C3600C12050 /* ToggleBraceLine.swift */,
+				9378B84F297A2C3600C12050 /* ToggleBraceLines.swift */,
+				9378B851297A2C3600C12050 /* XcodeLines.swift */,
+			);
+			path = "SwiftUI View Operations";
+			sourceTree = "<group>";
+		};
+		9378B861297A363300C12050 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				9378B862297A363700C12050 /* Extensions */,
+				9378B857297A362E00C12050 /* FormatError.swift */,
+				9378B856297A362E00C12050 /* Indent.swift */,
+				9378B855297A362E00C12050 /* Parser.swift */,
+				9378B85A297A362E00C12050 /* Pref.swift */,
+				9378B858297A362E00C12050 /* Preferences.swift */,
+				9378B859297A362E00C12050 /* SwiftParser.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		9378B862297A363700C12050 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9378B864297A364200C12050 /* Extension.swift */,
+				9378B865297A364200C12050 /* ExtensionChar.swift */,
+				9378B863297A364200C12050 /* ExtensionString.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		93B282F4294AEDD200364206 = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +380,8 @@
 		93B2CF37297603DF006E1A23 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				9378B84C297A243400C12050 /* SwiftUI View Operations */,
+				9378B83D297A16D700C12050 /* Sort Lines and Imports */,
 				93B2CF562976096D006E1A23 /* JSON to Codable */,
 			);
 			path = Vendor;
@@ -508,37 +600,57 @@
 			buildActionMask = 2147483647;
 			files = (
 				93B2CF6629760B6E006E1A23 /* NodeViewModel.swift in Sources */,
+				9378B843297A170100C12050 /* ImportSorter.swift in Sources */,
+				9378B848297A170D00C12050 /* SortSelectedRangeList.swift in Sources */,
 				93B2CF4B2976094D006E1A23 /* ConvertJSONToCodableCommand.swift in Sources */,
 				93B28337294AEDDD00364206 /* SourceEditorExtension.swift in Sources */,
 				932F4D8D294E4DC400FA27CE /* AutoCreateExtensionMarksCommand.swift in Sources */,
+				9378B85F297A362E00C12050 /* SwiftParser.swift in Sources */,
 				93B2CF6C29760B7A006E1A23 /* Copyable.swift in Sources */,
 				93B2CF332975DA4E006E1A23 /* FormatAsMultiLine.swift in Sources */,
+				9378B84E297A2C2F00C12050 /* FormatLines.swift in Sources */,
 				93B2CF6A29760B77006E1A23 /* Tree.swift in Sources */,
 				93B2CF8429760B9B006E1A23 /* Dictionary+Utils.swift in Sources */,
+				9378B854297A2C3600C12050 /* XcodeLines.swift in Sources */,
+				9378B868297A364200C12050 /* ExtensionChar.swift in Sources */,
+				9378B85B297A362E00C12050 /* Parser.swift in Sources */,
+				9378B841297A16F900C12050 /* String+Extension.swift in Sources */,
 				93B2CF8D29761F0E006E1A23 /* BeautifyJSONCommand.swift in Sources */,
 				93B2CF7929760B94006E1A23 /* KotlinGenerator.swift in Sources */,
 				93B2CF7329760B8B006E1A23 /* KotlinTypeHandler.swift in Sources */,
 				93B2CF362975FB52006E1A23 /* AutoMarkCommand.swift in Sources */,
+				9378B85C297A362E00C12050 /* Indent.swift in Sources */,
+				9378B860297A362E00C12050 /* Pref.swift in Sources */,
 				93B2CF7429760B8B006E1A23 /* SwiftTypeHandler.swift in Sources */,
+				9378B83F297A16F200C12050 /* CountableClosedRange+Extension.swift in Sources */,
 				93B2CF7029760B83006E1A23 /* GeneratorType.swift in Sources */,
 				93B2CF8F29762854006E1A23 /* CreateTypeDefinitionCommand.swift in Sources */,
 				93B2CF7A29760B94006E1A23 /* StructGenerator.swift in Sources */,
+				9378B853297A2C3600C12050 /* ToggleBraceLine.swift in Sources */,
+				9378B867297A364200C12050 /* Extension.swift in Sources */,
 				93B2CF6929760B77006E1A23 /* Node.swift in Sources */,
 				932F4D91294E538A00FA27CE /* WrapInIfDefCommand.swift in Sources */,
+				9378B852297A2C3600C12050 /* ToggleBraceLines.swift in Sources */,
 				93B2CF8129760B9B006E1A23 /* String+Utils.swift in Sources */,
 				93B2CF8629760B9B006E1A23 /* Tree+Debug.swift in Sources */,
+				9378B847297A170D00C12050 /* SortSelectedLinesByLenght.swift in Sources */,
 				93B28347294AEE0200364206 /* EditorController.swift in Sources */,
 				932F4D8B294E4A8D00FA27CE /* FormatCodeForSharingCommand.swift in Sources */,
+				9378B85E297A362E00C12050 /* Preferences.swift in Sources */,
 				93B2CF8229760B9B006E1A23 /* DateFormatter+Types.swift in Sources */,
 				93B2CF8329760B9B006E1A23 /* Array+Utils.swift in Sources */,
+				9378B85D297A362E00C12050 /* FormatError.swift in Sources */,
 				932F4D8F294E504300FA27CE /* SearchInCommand.swift in Sources */,
+				9378B866297A364200C12050 /* ExtensionString.swift in Sources */,
 				93B2CF6F29760B83006E1A23 /* Primitive.swift in Sources */,
 				93B2CF7829760B94006E1A23 /* SwiftGenerator.swift in Sources */,
 				932F4D89294E49A900FA27CE /* AlignAroundEqualsCommand.swift in Sources */,
 				93B2CF8529760B9B006E1A23 /* Data+Utils.swift in Sources */,
 				93F9E0E2297525B2009E3B27 /* WrapInLocalizedStringCommand.swift in Sources */,
 				93B28339294AEDDD00364206 /* SourceEditorCommand.swift in Sources */,
+				9378B849297A170D00C12050 /* SortSelectedLinesByAlphabetically.swift in Sources */,
 				930CD0A0294E456500F58F30 /* StripTrailingWhitespaceCommand.swift in Sources */,
+				9378B84B297A178200C12050 /* Sort.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

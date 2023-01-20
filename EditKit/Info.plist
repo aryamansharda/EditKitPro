@@ -12,9 +12,9 @@
 					<key>XCSourceEditorCommandClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>EditKitPro.EditKit.SortLines</string>
+					<string>EditKitPro.EditKit.SortImports</string>
 					<key>XCSourceEditorCommandName</key>
-					<string>Sort Lines</string>
+					<string>Sort Imports</string>
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
@@ -23,6 +23,14 @@
 					<string>EditKitPro.EditKit.SortLinesByLength</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>Sort Lines By Length</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>EditKitPro.EditKit.SortLinesAlphabetically</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Sort Lines Alphabetically</string>
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
@@ -38,7 +46,7 @@
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>EditKitPro.EditKit.FormatCodeForSharing</string>
 					<key>XCSourceEditorCommandName</key>
-					<string>Copy As Markdown Block</string>
+					<string>Copy as Markdown</string>
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
@@ -127,6 +135,38 @@
 					<string>EditKitPro.EditKit.CreateTypeDefinition</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>Create Type Defintion</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>EditKitPro.EditKit.DisableOuterView</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>SwiftUI -&gt; Disable Outer View</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>EditKitPro.EditKit.DeleteOuterView</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>SwiftUI -&gt; Delete Outer View</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>EditKitPro.EditKit.DisableView</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>SwiftUI -&gt; Disable View</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>EditKitPro.EditKit.DeleteView</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>SwiftUI -&gt; Delete View</string>
 				</dict>
 			</array>
 			<key>XCSourceEditorExtensionPrincipalClass</key>
