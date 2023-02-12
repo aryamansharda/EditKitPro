@@ -19,9 +19,15 @@ class XcodeLines: NSObject, XCSourceEditorCommand {
 
     enum XcodeLinesError: Error, LocalizedError {
         case incompatibleFileType
+        case invalidLineSelection
 
         var errorDescription: String? {
-            return "Incomaptible file type found (only Swift & Playgrounds supported)."
+            switch self {
+            case .incompatibleFileType:
+                return "Incomaptible file type found (only Swift & Playgrounds supported)."
+            case .invalidLineSelection:
+                return "Please verify line selections and try again."
+            }
         }
     }
 
@@ -39,8 +45,6 @@ class XcodeLines: NSObject, XCSourceEditorCommand {
     func performSetup(invocation: XCSourceEditorCommandInvocation) throws {
         self.invocation = invocation
 
-
-        // TODO: Come back and look at this
         let uti = invocation.buffer.contentUTI
                 
         guard supportUTIs.contains(uti) else {

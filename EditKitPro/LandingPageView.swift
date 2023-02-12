@@ -64,7 +64,7 @@ struct LandingPageView: View {
                         HStack(spacing: 8) {
                             Image(systemName: "message")
                             VStack {
-                                Text("Message Developer")
+                                Text("Message developer")
                                     .font(.title3)
                                     .fontWeight(.medium)
                             }

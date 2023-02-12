@@ -8,29 +8,109 @@
 		<dict>
 			<key>XCSourceEditorCommandDefinitions</key>
 			<array>
-				<dict>
-					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
-					<key>XCSourceEditorCommandIdentifier</key>
-					<string>EditKitPro.EditKit.SortImports</string>
-					<key>XCSourceEditorCommandName</key>
-					<string>Sort Imports</string>
-				</dict>
+                <dict>
+                    <key>XCSourceEditorCommandClassName</key>
+                    <string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+                    <key>XCSourceEditorCommandIdentifier</key>
+                    <string>EditKitPro.EditKit.AlignAroundEquals</string>
+                    <key>XCSourceEditorCommandName</key>
+                    <string>Align around =</string>
+                </dict>
+                <dict>
+                    <key>XCSourceEditorCommandClassName</key>
+                    <string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+                    <key>XCSourceEditorCommandIdentifier</key>
+                    <string>EditKitPro.EditKit.AutoCreateExtensionMarks</string>
+                    <key>XCSourceEditorCommandName</key>
+                    <string>Auto MARK Extensions</string>
+                </dict>
+                <dict>
+                    <key>XCSourceEditorCommandClassName</key>
+                    <string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+                    <key>XCSourceEditorCommandIdentifier</key>
+                    <string>EditKitPro.EditKit.BeautifyJSON</string>
+                    <key>XCSourceEditorCommandName</key>
+                    <string>Beautify JSON</string>
+                </dict>
+                <dict>
+                    <key>XCSourceEditorCommandClassName</key>
+                    <string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+                    <key>XCSourceEditorCommandIdentifier</key>
+                    <string>EditKitPro.EditKit.ConvertJSONToCodable</string>
+                    <key>XCSourceEditorCommandName</key>
+                    <string>Convert JSON to Codable</string>
+                </dict>
+                <dict>
+                    <key>XCSourceEditorCommandClassName</key>
+                    <string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+                    <key>XCSourceEditorCommandIdentifier</key>
+                    <string>EditKitPro.EditKit.FormatCodeForSharing</string>
+                    <key>XCSourceEditorCommandName</key>
+                    <string>Copy as Markdown</string>
+                </dict>
+                <dict>
+                    <key>XCSourceEditorCommandClassName</key>
+                    <string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+                    <key>XCSourceEditorCommandIdentifier</key>
+                    <string>EditKitPro.EditKit.CreateTypeDefinition</string>
+                    <key>XCSourceEditorCommandName</key>
+                    <string>Create type defintion</string>
+                </dict>
+                <dict>
+                    <key>XCSourceEditorCommandClassName</key>
+                    <string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+                    <key>XCSourceEditorCommandIdentifier</key>
+                    <string>EditKitPro.EditKit.FormatAsMultiLine</string>
+                    <key>XCSourceEditorCommandName</key>
+                    <string>Format as multi-line</string>
+                </dict>
+                <dict>
+                    <key>XCSourceEditorCommandClassName</key>
+                    <string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+                    <key>XCSourceEditorCommandIdentifier</key>
+                    <string>EditKitPro.EditKit.SearchOnPlatform.GitHub</string>
+                    <key>XCSourceEditorCommandName</key>
+                    <string>Search selection on GitHub</string>
+                </dict>
+                <dict>
+                    <key>XCSourceEditorCommandClassName</key>
+                    <string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+                    <key>XCSourceEditorCommandIdentifier</key>
+                    <string>EditKitPro.EditKit.SearchOnPlatform.Google</string>
+                    <key>XCSourceEditorCommandName</key>
+                    <string>Search selection on Google</string>
+                </dict>
+                <dict>
+                    <key>XCSourceEditorCommandClassName</key>
+                    <string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+                    <key>XCSourceEditorCommandIdentifier</key>
+                    <string>EditKitPro.EditKit.SearchOnPlatform.StackOverflow</string>
+                    <key>XCSourceEditorCommandName</key>
+                    <string>Search selection on StackOverflow</string>
+                </dict>
+                <dict>
+                    <key>XCSourceEditorCommandClassName</key>
+                    <string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+                    <key>XCSourceEditorCommandIdentifier</key>
+                    <string>EditKitPro.EditKit.SortImports</string>
+                    <key>XCSourceEditorCommandName</key>
+                    <string>Sort imports</string>
+                </dict>
+                <dict>
+                    <key>XCSourceEditorCommandClassName</key>
+                    <string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+                    <key>XCSourceEditorCommandIdentifier</key>
+                    <string>EditKitPro.EditKit.SortLinesAlphabetically</string>
+                    <key>XCSourceEditorCommandName</key>
+                    <string>Sort lines alphabetically</string>
+                </dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>EditKitPro.EditKit.SortLinesByLength</string>
 					<key>XCSourceEditorCommandName</key>
-					<string>Sort Lines By Length</string>
-				</dict>
-				<dict>
-					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
-					<key>XCSourceEditorCommandIdentifier</key>
-					<string>EditKitPro.EditKit.SortLinesAlphabetically</string>
-					<key>XCSourceEditorCommandName</key>
-					<string>Sort Lines Alphabetically</string>
+					<string>Sort lines by length</string>
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
@@ -38,23 +118,7 @@
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>EditKitPro.EditKit.StripTrailingWhitespaceInFile</string>
 					<key>XCSourceEditorCommandName</key>
-					<string>Strip Trailing Whitespace In File</string>
-				</dict>
-				<dict>
-					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
-					<key>XCSourceEditorCommandIdentifier</key>
-					<string>EditKitPro.EditKit.FormatCodeForSharing</string>
-					<key>XCSourceEditorCommandName</key>
-					<string>Copy as Markdown</string>
-				</dict>
-				<dict>
-					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
-					<key>XCSourceEditorCommandIdentifier</key>
-					<string>EditKitPro.EditKit.AutoCreateExtensionMarks</string>
-					<key>XCSourceEditorCommandName</key>
-					<string>Auto-Mark Extensions</string>
+					<string>Strip trailing whitespace in file</string>
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
@@ -68,14 +132,6 @@
 					<key>XCSourceEditorCommandClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>EditKitPro.EditKit.AlignAroundEquals</string>
-					<key>XCSourceEditorCommandName</key>
-					<string>Align Around Equals</string>
-				</dict>
-				<dict>
-					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
-					<key>XCSourceEditorCommandIdentifier</key>
 					<string>EditKitPro.EditKit.WrapInLocalizedString</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>Wrap in NSLocalizedString</string>
@@ -84,65 +140,9 @@
 					<key>XCSourceEditorCommandClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>EditKitPro.EditKit.FormatAsMultiLine</string>
-					<key>XCSourceEditorCommandName</key>
-					<string>Format As Multiline</string>
-				</dict>
-				<dict>
-					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
-					<key>XCSourceEditorCommandIdentifier</key>
-					<string>EditKitPro.EditKit.SearchOnPlatform.Google</string>
-					<key>XCSourceEditorCommandName</key>
-					<string>Search selection on Google</string>
-				</dict>
-				<dict>
-					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
-					<key>XCSourceEditorCommandIdentifier</key>
-					<string>EditKitPro.EditKit.SearchOnPlatform.StackOverflow</string>
-					<key>XCSourceEditorCommandName</key>
-					<string>Search selection on StackOverflow</string>
-				</dict>
-				<dict>
-					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
-					<key>XCSourceEditorCommandIdentifier</key>
-					<string>EditKitPro.EditKit.SearchOnPlatform.GitHub</string>
-					<key>XCSourceEditorCommandName</key>
-					<string>Search selection on GitHub</string>
-				</dict>
-				<dict>
-					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
-					<key>XCSourceEditorCommandIdentifier</key>
-					<string>EditKitPro.EditKit.ConvertJSONToCodable</string>
-					<key>XCSourceEditorCommandName</key>
-					<string>Convert JSON to Codable</string>
-				</dict>
-				<dict>
-					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
-					<key>XCSourceEditorCommandIdentifier</key>
-					<string>EditKitPro.EditKit.BeautifyJSON</string>
-					<key>XCSourceEditorCommandName</key>
-					<string>Beautify JSON</string>
-				</dict>
-				<dict>
-					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
-					<key>XCSourceEditorCommandIdentifier</key>
-					<string>EditKitPro.EditKit.CreateTypeDefinition</string>
-					<key>XCSourceEditorCommandName</key>
-					<string>Create Type Defintion</string>
-				</dict>
-				<dict>
-					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
-					<key>XCSourceEditorCommandIdentifier</key>
 					<string>EditKitPro.EditKit.DisableOuterView</string>
 					<key>XCSourceEditorCommandName</key>
-					<string>SwiftUI -&gt; Disable Outer View</string>
+					<string>SwiftUI -&gt; Disable outer view</string>
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
@@ -150,7 +150,7 @@
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>EditKitPro.EditKit.DeleteOuterView</string>
 					<key>XCSourceEditorCommandName</key>
-					<string>SwiftUI -&gt; Delete Outer View</string>
+					<string>SwiftUI -&gt; Delete outer view</string>
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
@@ -158,7 +158,7 @@
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>EditKitPro.EditKit.DisableView</string>
 					<key>XCSourceEditorCommandName</key>
-					<string>SwiftUI -&gt; Disable View</string>
+					<string>SwiftUI -&gt; Disable view</string>
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
@@ -166,7 +166,7 @@
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>EditKitPro.EditKit.DeleteView</string>
 					<key>XCSourceEditorCommandName</key>
-					<string>SwiftUI -&gt; Delete View</string>
+					<string>SwiftUI -&gt; Delete view</string>
 				</dict>
 			</array>
 			<key>XCSourceEditorExtensionPrincipalClass</key>

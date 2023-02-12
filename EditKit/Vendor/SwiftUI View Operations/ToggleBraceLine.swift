@@ -13,13 +13,16 @@ class ToggleBraceLine: XcodeLines {
         do {
             try performSetup(invocation: invocation)
             for i in 0 ..< selections.count {
-                if let selection = selections[i] as? XCSourceTextRange {
+                if i < selections.count, let selection = selections[i] as? XCSourceTextRange {
                     // Look at current line for "{", found has matching "}" line
                     let found = hasOpenBrace(index: selection.start.line)
                     if found != 0 {
                         toggleComment(index: selection.start.line)
                         toggleComment(index: found + selection.start.line)
                     }
+                } else {
+                    completionHandler(XcodeLinesError.invalidLineSelection.intoNSError)
+                    return
                 }
             }
 
@@ -38,13 +41,16 @@ class RemoveBraceLine: XcodeLines {
         do {
             try performSetup(invocation: invocation)
             for i in 0 ..< selections.count {
-                if let selection = selections[i] as? XCSourceTextRange {
+                if i < selections.count, let selection = selections[i] as? XCSourceTextRange {
                     // Look at current line for "{", found has matching "}" line
                     let found = hasOpenBrace(index: selection.start.line)
                     if found != 0 {
                         removeLine(index: found + selection.start.line)
                         removeLine(index: selection.start.line)
                     }
+                } else {
+                    completionHandler(XcodeLinesError.invalidLineSelection.intoNSError)
+                    return
                 }
             }
 
