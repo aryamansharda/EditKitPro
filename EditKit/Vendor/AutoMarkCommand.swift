@@ -9,7 +9,7 @@ import Foundation
 import XcodeKit
 
 class AutoMarkCommand: NSObject, XCSourceEditorCommand {
-    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
+    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         var lineClassMark: Int?
         var linePropertieMark: Int?
         var lineIBOutletMark: Int?
@@ -26,7 +26,6 @@ class AutoMarkCommand: NSObject, XCSourceEditorCommand {
             if allLines.contains("MARK: - IBOutlets") {
                 lineIBOutletMark = 0
             }
-
 
             if allLines.contains("MARK: - Properties") {
                 linePropertieMark = 0
@@ -151,5 +150,4 @@ class AutoMarkCommand: NSObject, XCSourceEditorCommand {
 
         completionHandler(nil)
     }
-
 }

@@ -9,8 +9,7 @@
 import XcodeKit
 
 class SortSelectedLinesByAlphabetically: NSObject, XCSourceEditorCommand {
-    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) {
-        SortSelectedRange().sort(buffer: invocation.buffer, by: .alphabetically)
-        completionHandler(nil)
+    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
+        SortSelectedRange().sort(buffer: invocation.buffer, by: .alphabetically, completionHandler: completionHandler)
     }
 }

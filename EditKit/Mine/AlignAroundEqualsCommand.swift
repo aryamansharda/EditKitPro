@@ -22,9 +22,10 @@ extension String.Index {
 }
 
 class AlignAroundEqualsCommand {
-    static func perform(with invocation: XCSourceEditorCommandInvocation) -> Void {
+    static func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         // Ensure a selection is provided
         guard let selection = invocation.buffer.selections.firstObject as? XCSourceTextRange else {
+            completionHandler(GenericError.default.intoNSError)
             return
         }
 
@@ -46,6 +47,8 @@ class AlignAroundEqualsCommand {
         for lineIndex in selection.start.line...selection.end.line {
 
             guard let originalLine = invocation.buffer.lines[lineIndex] as? String else {
+                // Input was not a String
+                completionHandler(GenericError.default.intoNSError)
                 return
             }
 
@@ -85,5 +88,6 @@ class AlignAroundEqualsCommand {
 
         // Set selections then return with no error.
         invocation.buffer.selections.setArray(updatedSelections)
+        completionHandler(nil)
     }
 }

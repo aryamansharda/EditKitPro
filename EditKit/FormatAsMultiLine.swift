@@ -31,13 +31,28 @@ fileprivate extension XCSourceEditorCommand {
 
 final class FormatAsMultiLine: NSObject, XCSourceEditorCommand {
     /// The `Format Selected Code` command.
-    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: ((Error?) -> Void)) {
+
+    enum FormatAsMultliLineError: Error, LocalizedError {
+        case noSelection
+        case unbalancedBrackets
+
+        var errorDescription: String? {
+            switch self {
+            case .noSelection:
+                return "Something went wrong. Please check your selection and try again."
+            case .unbalancedBrackets:
+                return "The number of opening and closing brackets ( or { are not equal."
+            }
+        }
+    }
+
+    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         /// Get the selection first.
         guard
             let selection = invocation.buffer.selections.firstObject,
             let range = selection as? XCSourceTextRange
         else {
-//            completionHandler(FormatError.noSelection)
+            completionHandler(FormatAsMultliLineError.noSelection.intoNSError)
             return
         }
 
@@ -105,7 +120,7 @@ final class FormatAsMultiLine: NSObject, XCSourceEditorCommand {
         case (.none, .some):
             selectionKind = .array
         default:
-//            completionHandler(FormatError.noSelection)
+            completionHandler(FormatAsMultliLineError.noSelection.intoNSError)
             return
         }
 
@@ -120,7 +135,7 @@ final class FormatAsMultiLine: NSObject, XCSourceEditorCommand {
 
         /// Make sure there's an opening and closing index.
         guard let openingBracesIndex = openingBracesIndex, let closingBracesIndex = closingBracesIndex else {
-//            completionHandler(FormatError.invalidSelection)
+            completionHandler(FormatAsMultliLineError.unbalancedBrackets.intoNSError)
             return
         }
 

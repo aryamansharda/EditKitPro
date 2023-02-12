@@ -10,7 +10,6 @@ import XcodeKit
 
 class SortSelectedLinesByLength: NSObject, XCSourceEditorCommand {
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) {
-        SortSelectedRange().sort(buffer: invocation.buffer, by: .length)
-        completionHandler(nil)
+        SortSelectedRange().sort(buffer: invocation.buffer, by: .length, completionHandler: completionHandler)
     }
 }

@@ -9,19 +9,20 @@ import Foundation
 import XcodeKit
 import AppKit
 
-
 class FormatCodeForSharingCommand {
-
-    static func perform(with invocation: XCSourceEditorCommandInvocation) -> Void {
+    static func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         let selectedText = selectedText(from: invocation.buffer)
-        
-        if !selectedText.isEmpty {
-            let pasteboardString = "```\n\(selectedText)\n```"
 
-            let pasteboard = NSPasteboard.general
-            pasteboard.declareTypes([.string], owner: nil)
-            pasteboard.setString(pasteboardString, forType: .string)
+        guard !selectedText.isEmpty else {
+            completionHandler(GenericError.default.intoNSError)
+            return
         }
+
+        let pasteboardString = "```\n\(selectedText)\n```"
+        let pasteboard = NSPasteboard.general
+        pasteboard.declareTypes([.string], owner: nil)
+        pasteboard.setString(pasteboardString, forType: .string)
+        completionHandler(nil)
     }
 
     private static func selectedText(from buffer: XCSourceTextBuffer) -> String {

@@ -10,7 +10,6 @@
 		930CD0A0294E456500F58F30 /* StripTrailingWhitespaceCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930CD09F294E456500F58F30 /* StripTrailingWhitespaceCommand.swift */; };
 		932F4D89294E49A900FA27CE /* AlignAroundEqualsCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4D88294E49A900FA27CE /* AlignAroundEqualsCommand.swift */; };
 		932F4D8B294E4A8D00FA27CE /* FormatCodeForSharingCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4D8A294E4A8D00FA27CE /* FormatCodeForSharingCommand.swift */; };
-		932F4D8D294E4DC400FA27CE /* AutoCreateExtensionMarksCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4D8C294E4DC400FA27CE /* AutoCreateExtensionMarksCommand.swift */; };
 		932F4D8F294E504300FA27CE /* SearchInCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4D8E294E504300FA27CE /* SearchInCommand.swift */; };
 		932F4D91294E538A00FA27CE /* WrapInIfDefCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4D90294E538A00FA27CE /* WrapInIfDefCommand.swift */; };
 		9378B83F297A16F200C12050 /* CountableClosedRange+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9378B83E297A16F200C12050 /* CountableClosedRange+Extension.swift */; };
@@ -125,7 +124,6 @@
 		930CD09F294E456500F58F30 /* StripTrailingWhitespaceCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripTrailingWhitespaceCommand.swift; sourceTree = "<group>"; };
 		932F4D88294E49A900FA27CE /* AlignAroundEqualsCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignAroundEqualsCommand.swift; sourceTree = "<group>"; };
 		932F4D8A294E4A8D00FA27CE /* FormatCodeForSharingCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatCodeForSharingCommand.swift; sourceTree = "<group>"; };
-		932F4D8C294E4DC400FA27CE /* AutoCreateExtensionMarksCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCreateExtensionMarksCommand.swift; sourceTree = "<group>"; };
 		932F4D8E294E504300FA27CE /* SearchInCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInCommand.swift; sourceTree = "<group>"; };
 		932F4D90294E538A00FA27CE /* WrapInIfDefCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapInIfDefCommand.swift; sourceTree = "<group>"; };
 		9378B83E297A16F200C12050 /* CountableClosedRange+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CountableClosedRange+Extension.swift"; sourceTree = "<group>"; };
@@ -356,7 +354,6 @@
 				93B2CF342975E291006E1A23 /* Mine */,
 				932F4D8A294E4A8D00FA27CE /* FormatCodeForSharingCommand.swift */,
 				93B2CF322975DA4E006E1A23 /* FormatAsMultiLine.swift */,
-				932F4D8C294E4DC400FA27CE /* AutoCreateExtensionMarksCommand.swift */,
 				932F4D8E294E504300FA27CE /* SearchInCommand.swift */,
 				932F4D90294E538A00FA27CE /* WrapInIfDefCommand.swift */,
 				93B2CF8E29762854006E1A23 /* CreateTypeDefinitionCommand.swift */,
@@ -604,7 +601,6 @@
 				9378B848297A170D00C12050 /* SortSelectedRangeList.swift in Sources */,
 				93B2CF4B2976094D006E1A23 /* ConvertJSONToCodableCommand.swift in Sources */,
 				93B28337294AEDDD00364206 /* SourceEditorExtension.swift in Sources */,
-				932F4D8D294E4DC400FA27CE /* AutoCreateExtensionMarksCommand.swift in Sources */,
 				9378B85F297A362E00C12050 /* SwiftParser.swift in Sources */,
 				93B2CF6C29760B7A006E1A23 /* Copyable.swift in Sources */,
 				93B2CF332975DA4E006E1A23 /* FormatAsMultiLine.swift in Sources */,

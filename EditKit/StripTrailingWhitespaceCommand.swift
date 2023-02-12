@@ -9,8 +9,7 @@ import Foundation
 import XcodeKit
 
 class StripTrailingWhitespaceCommand  {
-    static func perform(with invocation: XCSourceEditorCommandInvocation) {
-
+    static func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         // Keep an array of changed line indices.
         var changedLineIndexes = [Int]()
 
@@ -18,9 +17,7 @@ class StripTrailingWhitespaceCommand  {
         // the trailing whitespace.
         for lineIndex in 0 ..< invocation.buffer.lines.count {
             let originalLine = invocation.buffer.lines[lineIndex] as! String
-            let newLine = originalLine.replacingOccurrences(of: "[ \t]+|[ \t]+$",
-                                                            with: "",
-                                                            options: [])
+            let newLine = originalLine.replacingOccurrences(of: "[ \t]+|[ \t]+$", with: "", options: [])
 
             // Only update lines that have changed.
             if originalLine != newLine {
@@ -39,5 +36,6 @@ class StripTrailingWhitespaceCommand  {
 
         // Set selections then return with no error.
         invocation.buffer.selections.setArray(updatedSelections)
+        completionHandler(nil)
     }
 }

@@ -10,7 +10,7 @@ import Foundation
 import XcodeKit
 
 class ImportSorter: NSObject, XCSourceEditorCommand {
-    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
+    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         // Implement your command here, invoking the completion handler when done. Pass it nil on success, and an NSError on failure.
         let bridgedLines = invocation.buffer.lines.compactMap { $0 as? String }
             
@@ -23,9 +23,10 @@ class ImportSorter: NSObject, XCSourceEditorCommand {
         }).sorted()
         
         guard importIndex.count == importFrameworks.count && invocation.buffer.lines.count > importIndex.count else {
-            completionHandler(NSError.init())
+            completionHandler(GenericError.default.intoNSError)
             return
         }
+
         importFrameworks.enumerated().forEach({ invocation.buffer.lines[importIndex[$0]] = "import \($1)" })
         completionHandler(nil)
     }

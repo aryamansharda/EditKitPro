@@ -8,7 +8,29 @@
 import XcodeKit
 import AppKit
 
+extension Error where Self: LocalizedError {
+    var intoNSError: NSError  {
+        let userInfo: [String : Any] = [
+            NSLocalizedFailureReasonErrorKey : errorDescription ?? String()
+        ]
+
+        return NSError(domain: String(), code: 0, userInfo: userInfo)
+    }
+}
+
+enum GenericError: Error, LocalizedError {
+    case `default`
+
+    var errorDescription: String? {
+        switch self {
+        case .default:
+            return "Something went wrong. Please check your selection and try again."
+        }
+    }
+}
+
 struct EditorController {
+
 
     enum EditorCommandIdentifier: String {
         case alignAroundEquals              = "EditKitPro.EditKit.AlignAroundEquals"
@@ -33,54 +55,46 @@ struct EditorController {
         case wrapInLocalizedString          = "EditKitPro.EditKit.WrapInLocalizedString"
     }
 
-    static func handle(with invocation: XCSourceEditorCommandInvocation, completionHandler: ((Error?) -> Void)?) {
+    static func handle(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
 
         // Fail fast if there is no text selected at all or there is no text in the file
         guard let commandIdentifier = EditorCommandIdentifier(rawValue: invocation.commandIdentifier) else { return }
 
         switch commandIdentifier {
         case .sortImports:
+            print("Sort imports")
             // MARK: DONE
-            ImportSorter().perform(with: invocation) { _ in
-                print("Error")
-            }
+//            ImportSorter().perform(with: invocation) { error in
+//                completionHandler(error)
+//            }
         case .sortLinesByLength:
             // MARK: DONE
             SortSelectedLinesByLength().perform(with: invocation) { _ in
                 print("Error")
             }
         case .sortLinesAlphabetically:
-            // MARK: DONE
-            SortSelectedLinesByAlphabetically().perform(with: invocation) { _ in
-                print("Error")
-            }
+            SortSelectedLinesByAlphabetically().perform(with: invocation, completionHandler: completionHandler)
+
         case .stripTrailingWhitespaceInFile:
-            StripTrailingWhitespaceCommand.perform(with: invocation)
+            StripTrailingWhitespaceCommand.perform(with: invocation, completionHandler: completionHandler)
+
         case .alignAroundEquals:
-            // MARK: DONE
-            // This appears to work now, but Xcode can format lines slightly differently
-            // Sometimes there will be a few millimeters of misalignment
-            // When you check in VSCode, everything is as it should be
-            AlignAroundEqualsCommand.perform(with: invocation)
+            /// This appears to work now, but Xcode can format lines slightly differently
+            /// Sometimes there will be a few millimeters of misalignment
+            /// When you check in VSCode, everything is as it should be
+            AlignAroundEqualsCommand.perform(with: invocation, completionHandler: completionHandler)
+
         case .formatCodeForSharing:
-            // MARK: DONE
             // This doesn't work on Slack regardless
-            FormatCodeForSharingCommand.perform(with: invocation)
+            FormatCodeForSharingCommand.perform(with: invocation, completionHandler: completionHandler)
+
         case .formatAsMultiLine:
             /// This only works on single lines, it starts goofing up otherwise.
-            // TODO: Maybe the fix is to just find all of the new lines and treat them as separate things
-            let formatAsMultiLineService = FormatAsMultiLine()
-            formatAsMultiLineService.perform(with: invocation) { _ in
-                // TODO: Handle errors eventually
-            }
+            FormatAsMultiLine().perform(with: invocation, completionHandler: completionHandler)
+
         case .autoCreateExtensionMarks:
-            // TODO: This has potential, but you need to make sure it doesn't duplicate existing MARKS
-            // Maybe create an array of supported marks and then remove the ones that have been found
-            // The approach of finding the first line where the keyword apepars seems reasonable
-            // Maybe process needs to rest nart on every struct, enum, and class (v2?)
-            AutoMarkCommand().perform(with: invocation) { _ in
-                print("Done")
-            }
+            AutoMarkCommand().perform(with: invocation, completionHandler: completionHandler)
+
         case .wrapInIfDef:
             // MARK: DONE
             WrapInIfDefCommand.perform(with: invocation)
