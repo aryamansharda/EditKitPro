@@ -11,9 +11,10 @@ import OSLog
 
 class ToggleBraceLines: XcodeLines {
     
-    override func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) -> Void {
+    override func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         do {
             try performSetup(invocation: invocation)
+
             for i in 0 ..< selections.count {
                 if let selection = selections[i] as? XCSourceTextRange {
                     // Look at current line for "{", found has matching "}" line
@@ -25,16 +26,18 @@ class ToggleBraceLines: XcodeLines {
                     }
                 }
             }
+
+            invocation.buffer.selections.removeAllObjects()
             completionHandler(nil)
         } catch {
-            completionHandler(error as NSError)
+            completionHandler(GenericError.default.intoNSError)
         }
     }
 }
 
 class RemoveBraceLines: XcodeLines {
     
-    override func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) -> Void {
+    override func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         do {
             try performSetup(invocation: invocation)
             for i in 0 ..< selections.count {
@@ -48,9 +51,11 @@ class RemoveBraceLines: XcodeLines {
                     }
                 }
             }
+
+            invocation.buffer.selections.removeAllObjects()
             completionHandler(nil)
         } catch {
-            completionHandler(error as NSError)
+            completionHandler(GenericError.default.intoNSError)
         }
     }
 }

@@ -30,8 +30,6 @@ enum GenericError: Error, LocalizedError {
 }
 
 struct EditorController {
-
-
     enum EditorCommandIdentifier: String {
         case alignAroundEquals              = "EditKitPro.EditKit.AlignAroundEquals"
         case autoCreateExtensionMarks       = "EditKitPro.EditKit.AutoCreateExtensionMarks"
@@ -68,10 +66,8 @@ struct EditorController {
 //                completionHandler(error)
 //            }
         case .sortLinesByLength:
-            // MARK: DONE
-            SortSelectedLinesByLength().perform(with: invocation) { _ in
-                print("Error")
-            }
+            SortSelectedLinesByLength.perform(with: invocation, completionHandler: completionHandler)
+
         case .sortLinesAlphabetically:
             SortSelectedLinesByAlphabetically().perform(with: invocation, completionHandler: completionHandler)
 
@@ -96,51 +92,37 @@ struct EditorController {
             AutoMarkCommand().perform(with: invocation, completionHandler: completionHandler)
 
         case .wrapInIfDef:
-            // MARK: DONE
-            WrapInIfDefCommand.perform(with: invocation)
-        case .wrapInLocalizedString:
-            // MARK: DONE
-            WrapInLocalizedStringCommand.perform(with: invocation)
-        case .searchOnGoogle, .searchOnStackOverflow, .searchOnGitHub:
-            // MARK: DONE
-            SearchOnPlatform().perform(with: invocation) { _ in
-                // TODO: Handle errors
-            }
-        case .convertJSONtoCodable:
-            // MARK: DONE
-            ConvertJSONToCodableCommand().perform(with: invocation) { _ in
-                // TODO: Handle errors
-            }
-        case .beautifyJSON:
-            // MARK: DONE
-            BeautifyJSONCommand().perform(with: invocation) { _ in
+            WrapInIfDefCommand.perform(with: invocation, completionHandler: completionHandler)
 
-            }
+        case .wrapInLocalizedString:
+            WrapInLocalizedStringCommand.perform(with: invocation, completionHandler: completionHandler)
+
+        case .searchOnGoogle, .searchOnStackOverflow, .searchOnGitHub:
+            SearchOnPlatform().perform(with: invocation, completionHandler: completionHandler)
+
+        case .convertJSONtoCodable:
+            ConvertJSONToCodableCommand().perform(with: invocation, completionHandler: completionHandler)
+
+        case .beautifyJSON:
+            BeautifyJSONCommand().perform(with: invocation, completionHandler: completionHandler)
+
         case .createTypeDefinition:
             // MARK: DONE
             CreateTypeDefinitionCommand().perform(with: invocation) { _ in
                 // TODO: Handle errors
             }
         case .disableView:
-            // MARK: DONE
-            ToggleBraceLines().perform(with: invocation) { _ in
-                invocation.buffer.selections.removeAllObjects()
-            }
+            ToggleBraceLines().perform(with: invocation, completionHandler: completionHandler)
+
         case .disableOuterView:
-            // MARK: DONE
-            ToggleBraceLine().perform(with: invocation) { _ in
-                invocation.buffer.selections.removeAllObjects()
-            }
+            ToggleBraceLine().perform(with: invocation, completionHandler: completionHandler)
+
         case .deleteOuterView:
-            // MARK: DONE
-            RemoveBraceLine().perform(with: invocation) { _ in
-                invocation.buffer.selections.removeAllObjects()
-            }
+            RemoveBraceLine().perform(with: invocation, completionHandler: completionHandler)
+
         case .deleteView:
-            // MARK: DONE
-            RemoveBraceLines().perform(with: invocation) { _ in
-                invocation.buffer.selections.removeAllObjects()
-            }
+            RemoveBraceLines().perform(with: invocation, completionHandler: completionHandler)
+
         }
     }
 }

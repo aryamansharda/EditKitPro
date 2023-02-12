@@ -8,8 +8,8 @@
 
 import XcodeKit
 
-class SortSelectedLinesByLength: NSObject, XCSourceEditorCommand {
-    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) {
+class SortSelectedLinesByLength {
+    static func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         SortSelectedRange().sort(buffer: invocation.buffer, by: .length, completionHandler: completionHandler)
     }
 }

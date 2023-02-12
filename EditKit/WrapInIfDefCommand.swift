@@ -9,12 +9,14 @@ import Foundation
 import XcodeKit
 
 class WrapInIfDefCommand {
-    static func perform(with invocation: XCSourceEditorCommandInvocation) -> Void {
-        let selections = invocation.buffer.selections as! [XCSourceTextRange]
-        let selection = selections.first!
+    static func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
+        guard let selections = invocation.buffer.selections as? [XCSourceTextRange], let selection = selections.first else {
+            completionHandler(GenericError.default.intoNSError)
+            return
+        }
+
         let startIndex = selection.start.line
         let endIndex = selection.end.line
-
         let selectedRange = NSRange(location: startIndex, length: 1 + endIndex - startIndex)
         let selectedLines = invocation.buffer.lines.subarray(with: selectedRange)
 
@@ -26,5 +28,7 @@ class WrapInIfDefCommand {
 
         invocation.buffer.lines.insert("#else", at: startIndex + selectedLines.count + 1)
         invocation.buffer.lines.insert("#endif", at: endIndex + selectedLines.count + 3)
+
+        completionHandler(nil)
     }
 }

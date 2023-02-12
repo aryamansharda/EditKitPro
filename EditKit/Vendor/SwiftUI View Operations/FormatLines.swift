@@ -8,9 +8,10 @@
 import XcodeKit
 import OSLog
 
+#warning("This class does not appear to be in use.")
 class FormatLines: XcodeLines {
 
-    override func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) -> Void {
+    override func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         do {
             try performSetup(invocation: invocation)
             var hasSelection = false

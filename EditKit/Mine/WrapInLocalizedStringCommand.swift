@@ -9,10 +9,10 @@ import Foundation
 import XcodeKit
 
 class WrapInLocalizedStringCommand  {
-    static func perform(with invocation: XCSourceEditorCommandInvocation) {
-
+    static func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         // Ensure a selection is provided
         guard let selection = invocation.buffer.selections.firstObject as? XCSourceTextRange else {
+            completionHandler(GenericError.default.intoNSError)
             return
         }
 
@@ -58,5 +58,6 @@ class WrapInLocalizedStringCommand  {
 
         // Set selections then return with no error.
         invocation.buffer.selections.setArray(updatedSelections)
+        completionHandler(nil)
     }
 }

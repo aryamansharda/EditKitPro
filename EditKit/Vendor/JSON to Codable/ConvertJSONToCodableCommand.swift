@@ -11,7 +11,7 @@ import AppKit
 
 class ConvertJSONToCodableCommand: NSObject, XCSourceEditorCommand {
     
-    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) -> Void {
+    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         guard let selection = invocation.buffer.selections.firstObject as? XCSourceTextRange else {
             completionHandler(NSError.invalidSelection)
             return

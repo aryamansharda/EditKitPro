@@ -16,30 +16,37 @@ let supportUTIs = [
     "com.apple.dt.playgroundpage"]
 
 class XcodeLines: NSObject, XCSourceEditorCommand {
-        
+
+    enum XcodeLinesError: Error, LocalizedError {
+        case incompatibleFileType
+
+        var errorDescription: String? {
+            return "Incomaptible file type found (only Swift & Playgrounds supported)."
+        }
+    }
+
     var newLines: [String] = []
     var invocation: XCSourceEditorCommandInvocation?
     var lines: NSMutableArray = []
     var selections: NSMutableArray = []
     var log: Logger = Logger()
 
-    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) {
+    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         completionHandler(nil)
         return
     }
 
     func performSetup(invocation: XCSourceEditorCommandInvocation) throws {
         self.invocation = invocation
-//        log.log("performSetup")
-        // Implement your command here, invoking the completion handler when done. Pass it nil on success, and an NSError on failure.
+
 
         // TODO: Come back and look at this
-//        let uti = invocation.buffer.contentUTI
+        let uti = invocation.buffer.contentUTI
                 
-//        guard supportUTIs.contains(uti) else {
-//            throw "UTI Error"
-//        }
-//
+        guard supportUTIs.contains(uti) else {
+            throw XcodeLinesError.incompatibleFileType
+        }
+
         if invocation.buffer.usesTabsForIndentation {
             Indent.char = "\t"
         } else {

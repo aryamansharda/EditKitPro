@@ -9,9 +9,8 @@ import Foundation
 import XcodeKit
 
 class BeautifyJSONCommand: NSObject, XCSourceEditorCommand {
-    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) {
+    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         guard let selection = invocation.buffer.selections.firstObject as? XCSourceTextRange else {
-            // TODO: Update error handling
             completionHandler(NSError(domain: "BeautifyJSON", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid Selection"]))
             return
         }
@@ -22,7 +21,6 @@ class BeautifyJSONCommand: NSObject, XCSourceEditorCommand {
         let selectedRange = NSRange(location: startIndex, length: 1 + endIndex - startIndex)
 
         guard let selectedLines = invocation.buffer.lines.subarray(with: selectedRange) as? [String] else {
-            // TODO: Update error handling
             completionHandler(NSError(domain: "BeautifyJSON", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid Selection"]))
             return
         }
@@ -30,7 +28,6 @@ class BeautifyJSONCommand: NSObject, XCSourceEditorCommand {
         let rawJSON = selectedLines.joined(separator: "\n").trimmingCharacters(in: .whitespacesAndNewlines)
 
         guard let beautifiedJSON = rawJSON.data(using: .utf8)?.prettyPrintedJSONString else {
-            // TODO: Update error handling
             completionHandler(NSError(domain: "BeautifyJSON", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid Selection"]))
             return
         }

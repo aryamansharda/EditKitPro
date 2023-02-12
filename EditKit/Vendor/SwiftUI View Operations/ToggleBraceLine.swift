@@ -9,7 +9,7 @@ import XcodeKit
 
 class ToggleBraceLine: XcodeLines {
 
-    override func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) -> Void {
+    override func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         do {
             try performSetup(invocation: invocation)
             for i in 0 ..< selections.count {
@@ -22,9 +22,11 @@ class ToggleBraceLine: XcodeLines {
                     }
                 }
             }
+
+            invocation.buffer.selections.removeAllObjects()
             completionHandler(nil)
         } catch {
-            completionHandler(error as NSError)
+            completionHandler(GenericError.default.intoNSError)
         }
     }
 }
@@ -32,7 +34,7 @@ class ToggleBraceLine: XcodeLines {
 
 class RemoveBraceLine: XcodeLines {
     
-    override func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) -> Void {
+    override func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         do {
             try performSetup(invocation: invocation)
             for i in 0 ..< selections.count {
@@ -45,9 +47,11 @@ class RemoveBraceLine: XcodeLines {
                     }
                 }
             }
+
+            invocation.buffer.selections.removeAllObjects()
             completionHandler(nil)
         } catch {
-            completionHandler(error as NSError)
+            completionHandler(GenericError.default.intoNSError)
         }
     }
 }

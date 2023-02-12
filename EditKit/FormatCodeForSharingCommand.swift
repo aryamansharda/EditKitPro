@@ -22,6 +22,7 @@ class FormatCodeForSharingCommand {
         let pasteboard = NSPasteboard.general
         pasteboard.declareTypes([.string], owner: nil)
         pasteboard.setString(pasteboardString, forType: .string)
+
         completionHandler(nil)
     }
 

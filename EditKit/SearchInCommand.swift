@@ -47,10 +47,9 @@ enum SearchEngine {
 }
 
 final class SearchOnPlatform: NSObject, XCSourceEditorCommand {
-
-    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) {
+    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         guard let selection = invocation.buffer.selections.firstObject as? XCSourceTextRange else {
-            completionHandler(NSError(domain: "Search", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid Selection"]))
+            completionHandler(GenericError.default.intoNSError)
             return
         }
 
@@ -60,7 +59,7 @@ final class SearchOnPlatform: NSObject, XCSourceEditorCommand {
         let selectedRange = NSRange(location: startIndex, length: 1 + endIndex - startIndex)
 
         guard let selectedLines = invocation.buffer.lines.subarray(with: selectedRange) as? [String] else {
-            completionHandler(NSError(domain: "Search", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid Selection"]))
+            completionHandler(GenericError.default.intoNSError)
             return
         }
 
