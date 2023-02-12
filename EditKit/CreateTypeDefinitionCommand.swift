@@ -156,32 +156,65 @@ class CreateTypeDefinitionCommand: NSObject, XCSourceEditorCommand {
         return comment[startIndex..<endIndex].trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
-    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
+    enum CreateTypeDefintionError: Error, LocalizedError {
+        case invalidSourceType
+        case noHeaderComments
+        case unableToExtractFileName
+        case unableToGenerateTypeDefinition
 
-        defer { completionHandler(nil) } // showing an error feels ugly, just do nothing in case of an error
+        var errorDescription: String? {
+            switch self {
+            case .invalidSourceType:
+                return "Please choose a .swift file."
+            case .noHeaderComments:
+                return "No header comments found."
+            case .unableToExtractFileName:
+                return "Unable to extract filename from header comments."
+            case .unableToGenerateTypeDefinition:
+                return "Unable to create type definition."
+            }
+        }
+    }
 
-        guard invocation.buffer.contentUTI == "public.swift-source" else { return }
-        guard let secondLine = invocation.buffer.lines.safeObject(atIndex: 1) as? String else { return }
-        guard let fileName = fileName(fromFileNameComment: secondLine) else { return }
+    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
+        guard invocation.buffer.contentUTI == "public.swift-source" else {
+            completionHandler(CreateTypeDefintionError.invalidSourceType.intoNSError)
+            return
+        }
+
+        guard let secondLine = invocation.buffer.lines.safeObject(atIndex: 1) as? String else {
+            completionHandler(CreateTypeDefintionError.noHeaderComments.intoNSError)
+            return
+        }
+
+        guard let fileName = fileName(fromFileNameComment: secondLine) else {
+            completionHandler(CreateTypeDefintionError.unableToExtractFileName.intoNSError)
+            return
+        }
+
         guard fileName.rangeOfCharacter(from: CharacterSet.letters.inverted) == nil else { return }
         guard invocation.buffer.lines.all({ !lineHasDeclaration($0 as? String ?? "") }) else { return }
 
         let type = Type.propableType(forFileName: fileName)
-        if let code = type.declarationCode(forTypeName: fileName, tabWidth: invocation.buffer.tabWidth) {
-
-            trimEmptyLinesAtTheEnd(invocation)
-
-            switch type {
-            case .classType(parentType: let parentType) where parentType != nil:
-                if invocation.buffer.lines.all({ !lineHasUIKitImport($0 as? String ?? "") }) {
-                    invocation.buffer.lines.add("import UIKit\n")
-                }
-            default:
-                break
-            }
-
-            invocation.buffer.lines.add(code)
-            setCursor(atLine: invocation.buffer.lines.count - 2, column: invocation.buffer.tabWidth, invocation: invocation)
+        guard let code = type.declarationCode(forTypeName: fileName, tabWidth: invocation.buffer.tabWidth) else {
+            completionHandler(CreateTypeDefintionError.unableToGenerateTypeDefinition.intoNSError)
+            return
         }
+
+        trimEmptyLinesAtTheEnd(invocation)
+
+        switch type {
+        case .classType(parentType: let parentType) where parentType != nil:
+            if invocation.buffer.lines.all({ !lineHasUIKitImport($0 as? String ?? "") }) {
+                invocation.buffer.lines.add("import UIKit\n")
+            }
+        default:
+            break
+        }
+
+        invocation.buffer.lines.add(code)
+        setCursor(atLine: invocation.buffer.lines.count - 2, column: invocation.buffer.tabWidth, invocation: invocation)
+
+        completionHandler(nil)
     }
 }

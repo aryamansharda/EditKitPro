@@ -60,11 +60,8 @@ struct EditorController {
 
         switch commandIdentifier {
         case .sortImports:
-            print("Sort imports")
-            // MARK: DONE
-//            ImportSorter().perform(with: invocation) { error in
-//                completionHandler(error)
-//            }
+            ImportSorter().perform(with: invocation, completionHandler: completionHandler)
+
         case .sortLinesByLength:
             SortSelectedLinesByLength.perform(with: invocation, completionHandler: completionHandler)
 
@@ -81,7 +78,7 @@ struct EditorController {
             AlignAroundEqualsCommand.perform(with: invocation, completionHandler: completionHandler)
 
         case .formatCodeForSharing:
-            // This doesn't work on Slack regardless
+            /// Note: this doesn't work on Slack regardless
             FormatCodeForSharingCommand.perform(with: invocation, completionHandler: completionHandler)
 
         case .formatAsMultiLine:
@@ -107,10 +104,8 @@ struct EditorController {
             BeautifyJSONCommand().perform(with: invocation, completionHandler: completionHandler)
 
         case .createTypeDefinition:
-            // MARK: DONE
-            CreateTypeDefinitionCommand().perform(with: invocation) { _ in
-                // TODO: Handle errors
-            }
+            CreateTypeDefinitionCommand().perform(with: invocation, completionHandler: completionHandler)
+
         case .disableView:
             ToggleBraceLines().perform(with: invocation, completionHandler: completionHandler)
 
