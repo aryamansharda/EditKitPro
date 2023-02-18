@@ -59,7 +59,7 @@ struct LandingPageView: View {
                     .contentShape(Rectangle())
 
                     Button {
-                        NSWorkspace.shared.open(URL(string: "mailton:aryaman@digitalbunker.dev")!)
+                        NSWorkspace.shared.open(URL(string: "mailto:aryaman@digitalbunker.dev")!)
                     } label: {
                         HStack(spacing: 8) {
                             Image(systemName: "message")
