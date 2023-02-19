@@ -14,11 +14,11 @@ extension String {
     }
     
     var isImportLine: Bool {
-        return contains("import")
+        hasPrefix("import ")
     }
     
     var removeImportPrefix: String {
-        replacingOccurrences(of: "import", with: "")
+        replacingOccurrences(of: "import ", with: "")
     }
     
     var removeNewLine: String {
