@@ -113,16 +113,18 @@ case protocolType
     }
 }
 
-class CreateTypeDefinitionCommand: NSObject, XCSourceEditorCommand {
-
-    private func setCursor(atLine line: Int, column: Int, invocation: XCSourceEditorCommandInvocation) {
+struct EditorHelper {
+    static func setCursor(atLine line: Int, column: Int, buffer: XCSourceTextBuffer) {
         let range = XCSourceTextRange()
         let position = XCSourceTextPosition(line: line, column: column)
         range.start = position
         range.end = position
-        invocation.buffer.selections.setArray([range])
+        buffer.selections.setArray([range])
     }
+}
 
+
+class CreateTypeDefinitionCommand: NSObject, XCSourceEditorCommand {
     private func trimEmptyLinesAtTheEnd(_ invocation: XCSourceEditorCommandInvocation) {
         while (invocation.buffer.lines.lastObject as? String)?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             invocation.buffer.lines.removeLastObject()
@@ -213,7 +215,7 @@ class CreateTypeDefinitionCommand: NSObject, XCSourceEditorCommand {
         }
 
         invocation.buffer.lines.add(code)
-        setCursor(atLine: invocation.buffer.lines.count - 2, column: invocation.buffer.tabWidth, invocation: invocation)
+        EditorHelper.setCursor(atLine: invocation.buffer.lines.count - 2, column: invocation.buffer.tabWidth, buffer: invocation.buffer)
 
         completionHandler(nil)
     }

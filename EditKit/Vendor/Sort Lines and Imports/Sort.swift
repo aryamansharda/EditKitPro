@@ -7,12 +7,14 @@
 
 import Foundation
 enum Sort {
-    case alphabetically
+    case alphabeticallyAscending
+    case alphabeticallyDescending
     case length
 
     func orderStyle(_ lhs: String, _ rhs: String) -> Bool {
         switch self {
-        case .alphabetically: return lhs < rhs
+        case .alphabeticallyAscending: return lhs < rhs
+        case .alphabeticallyDescending: return lhs > rhs
         case .length: return lhs.count < rhs.count
         }
     }

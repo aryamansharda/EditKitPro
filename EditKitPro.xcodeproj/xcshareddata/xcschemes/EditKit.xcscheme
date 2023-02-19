@@ -30,7 +30,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "93B282FC294AEDD200364206"
-               BuildableName = "EditKitPro.app"
+               BuildableName = "EditKit Pro.app"
                BlueprintName = "EditKitPro"
                ReferencedContainer = "container:EditKitPro.xcodeproj">
             </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "93B282FC294AEDD200364206"
-            BuildableName = "EditKitPro.app"
+            BuildableName = "EditKit Pro.app"
             BlueprintName = "EditKitPro"
             ReferencedContainer = "container:EditKitPro.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "93B282FC294AEDD200364206"
-            BuildableName = "EditKitPro.app"
+            BuildableName = "EditKit Pro.app"
             BlueprintName = "EditKitPro"
             ReferencedContainer = "container:EditKitPro.xcodeproj">
          </BuildableReference>

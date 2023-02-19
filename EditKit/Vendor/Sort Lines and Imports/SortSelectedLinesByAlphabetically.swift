@@ -8,8 +8,14 @@
 
 import XcodeKit
 
-class SortSelectedLinesByAlphabetically: NSObject, XCSourceEditorCommand {
+class SortSelectedLinesByAlphabeticallyAscending: NSObject, XCSourceEditorCommand {
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
-        SortSelectedRange().sort(buffer: invocation.buffer, by: .alphabetically, completionHandler: completionHandler)
+        SortSelectedRange().sort(buffer: invocation.buffer, by: .alphabeticallyAscending, completionHandler: completionHandler)
+    }
+}
+
+class SortSelectedLinesByAlphabeticallyDescending: NSObject, XCSourceEditorCommand {
+    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
+        SortSelectedRange().sort(buffer: invocation.buffer, by: .alphabeticallyDescending, completionHandler: completionHandler)
     }
 }

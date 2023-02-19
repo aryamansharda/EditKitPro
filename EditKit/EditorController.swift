@@ -42,7 +42,8 @@ struct EditorController {
         case searchOnGoogle                 = "EditKitPro.EditKit.SearchOnPlatform.Google"
         case searchOnStackOverflow          = "EditKitPro.EditKit.SearchOnPlatform.StackOverflow"
         case sortImports                    = "EditKitPro.EditKit.SortImports"
-        case sortLinesAlphabetically        = "EditKitPro.EditKit.SortLinesAlphabetically"
+        case sortLinesAlphabeticallyAscending        = "EditKitPro.EditKit.SortLinesAlphabeticallyAscending"
+        case sortLinesAlphabeticallyDescending        = "EditKitPro.EditKit.SortLinesAlphabeticallyDescending"
         case disableOuterView              = "EditKitPro.EditKit.DisableOuterView"
         case disableView              = "EditKitPro.EditKit.DisableView"
         case deleteOuterView              = "EditKitPro.EditKit.DeleteOuterView"
@@ -65,8 +66,11 @@ struct EditorController {
         case .sortLinesByLength:
             SortSelectedLinesByLength.perform(with: invocation, completionHandler: completionHandler)
 
-        case .sortLinesAlphabetically:
-            SortSelectedLinesByAlphabetically().perform(with: invocation, completionHandler: completionHandler)
+        case .sortLinesAlphabeticallyAscending:
+            SortSelectedLinesByAlphabeticallyAscending().perform(with: invocation, completionHandler: completionHandler)
+
+        case .sortLinesAlphabeticallyDescending:
+            SortSelectedLinesByAlphabeticallyDescending().perform(with: invocation, completionHandler: completionHandler)
 
         case .stripTrailingWhitespaceInFile:
             StripTrailingWhitespaceCommand.perform(with: invocation, completionHandler: completionHandler)
