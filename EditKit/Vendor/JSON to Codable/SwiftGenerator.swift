@@ -40,7 +40,7 @@ struct SwiftGenerator {
         var swift = ""
         for key in properties.keys.sorted() {
             guard let value = properties[key] else { continue }
-            swift += "    var \(update(key: key)): \(value)\n"
+            swift += "    let \(update(key: key)): \(value)\n"
         }
         swift += "\n"
         return swift

@@ -12,7 +12,7 @@ struct RoadmapContainerView: View {
     private let configuration = RoadmapConfiguration(
         roadmapJSONURL: URL(string: "https://simplejsoncms.com/api/w1wxyqgoqv")!,
         namespace: "roadmap",
-        style: RoadmapTemplate.standard.style
+        style: RoadmapTemplate.playful.style
     )
 
     var body: some View {

@@ -22,12 +22,12 @@ struct SwiftTypeHandler {
             }
         }
 
-        if value is Double {
-            return .double
-        }
-
         if value is Int {
             return .int
+        }
+
+        if value is Double {
+            return .double
         }
 
         if let string = value as? String {
