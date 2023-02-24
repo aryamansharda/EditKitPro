@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "roadmap",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AvdLee/Roadmap.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "d3eb0cd195883b8d32f923174b268cdc177f312f"
+      }
+    }
+  ],
+  "version" : 2
+}
