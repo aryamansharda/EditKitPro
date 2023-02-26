@@ -72,7 +72,20 @@ class BeautifyJSONCommand: NSObject, XCSourceEditorCommand {
 All files in the `Third Party` folder are taken from the list of open source libraries mentioned below.
 
 ## Open Source Dependencies
-EditKit would not have been possible without the help of these open source libraries: 
+EditKit would not have been possible without the help and inspiration from these open source libraries: 
+
+- [XShared](https://github.com/Otbivnoe/XShared/)
+- [Xcode Source Editor Extension](https://github.com/cellular/xcodeextensionmark-swift/)
+- [XalignProject](https://github.com/love-everyday/XalignProject/)
+- [alanzeino](https://github.com/alanzeino/source-editor-extension/)
+- [DeclareType](https://github.com/timaktimak/DeclareType)
+- [Sorter](https://github.com/aniltaskiran/LazyXcode/)
+- [Multiliner](https://github.com/aheze/Multiliner/)
+- [swiftuitools](https://github.com/tgunr/swiftuitools/)
+- [Finch](https://github.com/NicholasBellucci/Finch/)
+- [Xcode-Search](https://github.com/skyline75489/Xcode-Search/)
+
+Note: Many of their original implementations have modified to support Swift 5.7+ and to fix bugs.
 
 ## Contact
 If you have any questions, feel free to message me at [aryaman@digitalbunker.dev](mailto:aryaman@digitalbunker.dev) or on [Twitter](https://twitter.com/aryamansharda).
