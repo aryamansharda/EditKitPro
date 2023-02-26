@@ -25,23 +25,23 @@ The current version of EditKit supports the following features:
 - SwiftUI -> Disable outer view
 - SwiftUI -> Delete view
 
-Demos of these features can be seen on the [blog post](https://digitalbunker.dev/editkit-pro/) and this [YouTube Video](https://www.youtube.com/watch?v=ZM4VHOvPdQU&t=6s&ab_channel=AryamanSharda).
+Demos of these features can be found on the [blog post](https://digitalbunker.dev/editkit-pro/) and this [YouTube Video](https://www.youtube.com/watch?v=ZM4VHOvPdQU&t=6s&ab_channel=AryamanSharda).
 
 ## Installation
-The most convenient way of installing the current release is through the [App Store](https://apps.apple.com/us/app/editkit-pro/id1659984546?mt=12). Then, you'll need to open `System Preferences -> Extensions -> Enable EditKit Pro`. 
+The most convenient way of installing the current release is through the [App Store](https://apps.apple.com/us/app/editkit-pro/id1659984546?mt=12). Once installed, you'll need to open `System Preferences -> Extensions -> Enable EditKit Pro`. 
 
-If EditKit Pro is not visible in Settings, this may be due to multiple conflicting Xcode installations.
+If EditKit Pro is not visible in Extensions, this may be due to multiple conflicting Xcode installations.
 
 Alternatively, you can clone this Xcode project:
  
-1. Once downloaded, open EditKit.xcodeproj.
-2. Before running, make sure to change the Team to your Personal Development Team for both the main app target and the `Editor` extension. The extension will not appear in Xcode unless it is signed correctly.
-3. Select the `Editor` extension and hit Run.
+1. Once downloaded, open the .xcodeproj.
+2. Before running, make sure to change the Team to your Personal Development Team for both the main app target and the `EditKit` extension. The extension will not appear in Xcode unless it is signed correctly.
+3. Select the `EditKit` extension and hit Run.
 4. You should see a debug version of Xcode appear. Pick any project or create a new one.
 5. Navigate to a source code file. Now, in the Editor dropdown menu, you should now see an entry for `EditKit`.
 
 ## Requirements
-Please make sure you **only have one valid** installation of Xcode on your machine and have a valid Apple Developer account as signing the extension will be required in order to run it.
+Please make sure you **only have one valid** installation of Xcode on your machine and have a valid Apple Developer account as signing the extension will be required in order to run it locally.
 
 ## Contributing
 All contributions are welcome. Just fork the repo and make a pull request.
@@ -69,7 +69,7 @@ class BeautifyJSONCommand: NSObject, XCSourceEditorCommand {
 }
 ```
 
-All files in the `Third Party` folder are taken from the list of open source libraries mentioned below.
+All files in the `Third Party` folder are modified versions of the open source libraries mentioned below.
 
 ## Open Source Dependencies
 EditKit would not have been possible without the help and inspiration from these open source libraries: 
