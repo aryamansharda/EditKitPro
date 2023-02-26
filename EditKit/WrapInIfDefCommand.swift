@@ -11,7 +11,7 @@ import XcodeKit
 class WrapInIfDefCommand {
     static func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         guard let selections = invocation.buffer.selections as? [XCSourceTextRange], let selection = selections.first else {
-            completionHandler(GenericError.default.intoNSError)
+            completionHandler(GenericError.default.nsError)
             return
         }
 

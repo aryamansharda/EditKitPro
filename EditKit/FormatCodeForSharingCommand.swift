@@ -14,7 +14,7 @@ class FormatCodeForSharingCommand {
         let selectedText = selectedText(from: invocation.buffer)
 
         guard !selectedText.isEmpty else {
-            completionHandler(GenericError.default.intoNSError)
+            completionHandler(GenericError.default.nsError)
             return
         }
 

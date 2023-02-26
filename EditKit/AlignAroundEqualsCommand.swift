@@ -25,7 +25,7 @@ class AlignAroundEqualsCommand {
     static func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         // Ensure a selection is provided
         guard let selection = invocation.buffer.selections.firstObject as? XCSourceTextRange else {
-            completionHandler(GenericError.default.intoNSError)
+            completionHandler(GenericError.default.nsError)
             return
         }
 
@@ -48,7 +48,7 @@ class AlignAroundEqualsCommand {
 
             guard let originalLine = invocation.buffer.lines[lineIndex] as? String else {
                 // Input was not a String
-                completionHandler(GenericError.default.intoNSError)
+                completionHandler(GenericError.default.nsError)
                 return
             }
 

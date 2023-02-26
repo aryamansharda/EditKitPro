@@ -49,7 +49,7 @@ enum SearchEngine {
 final class SearchOnPlatform: NSObject, XCSourceEditorCommand {
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         guard let selection = invocation.buffer.selections.firstObject as? XCSourceTextRange else {
-            completionHandler(GenericError.default.intoNSError)
+            completionHandler(GenericError.default.nsError)
             return
         }
 
@@ -59,7 +59,7 @@ final class SearchOnPlatform: NSObject, XCSourceEditorCommand {
         let selectedRange = NSRange(location: startIndex, length: 1 + endIndex - startIndex)
 
         guard let selectedLines = invocation.buffer.lines.subarray(with: selectedRange) as? [String] else {
-            completionHandler(GenericError.default.intoNSError)
+            completionHandler(GenericError.default.nsError)
             return
         }
 

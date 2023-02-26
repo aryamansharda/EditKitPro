@@ -180,17 +180,17 @@ class CreateTypeDefinitionCommand: NSObject, XCSourceEditorCommand {
 
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         guard invocation.buffer.contentUTI == "public.swift-source" else {
-            completionHandler(CreateTypeDefintionError.invalidSourceType.intoNSError)
+            completionHandler(CreateTypeDefintionError.invalidSourceType.nsError)
             return
         }
 
         guard let secondLine = invocation.buffer.lines.safeObject(atIndex: 1) as? String else {
-            completionHandler(CreateTypeDefintionError.noHeaderComments.intoNSError)
+            completionHandler(CreateTypeDefintionError.noHeaderComments.nsError)
             return
         }
 
         guard let fileName = fileName(fromFileNameComment: secondLine) else {
-            completionHandler(CreateTypeDefintionError.unableToExtractFileName.intoNSError)
+            completionHandler(CreateTypeDefintionError.unableToExtractFileName.nsError)
             return
         }
 
@@ -199,7 +199,7 @@ class CreateTypeDefinitionCommand: NSObject, XCSourceEditorCommand {
 
         let type = Type.propableType(forFileName: fileName)
         guard let code = type.declarationCode(forTypeName: fileName, tabWidth: invocation.buffer.tabWidth) else {
-            completionHandler(CreateTypeDefintionError.unableToGenerateTypeDefinition.intoNSError)
+            completionHandler(CreateTypeDefintionError.unableToGenerateTypeDefinition.nsError)
             return
         }
 

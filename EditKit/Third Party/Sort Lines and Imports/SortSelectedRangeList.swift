@@ -22,7 +22,7 @@ struct SortSelectedRange {
         guard let firstSelection = buffer.selections.firstObject as? XCSourceTextRange,
             let lastSelection = buffer.selections.lastObject as? XCSourceTextRange,
             firstSelection.start.line < lastSelection.end.line else {
-            completionHandler(SortSelectedRangeError.genericError.intoNSError)
+            completionHandler(SortSelectedRangeError.genericError.nsError)
             return
         }
         
@@ -53,7 +53,7 @@ struct SortSelectedRange {
         }
 
         guard lines.count == range.count else {
-            completionHandler(SortSelectedRangeError.genericError.intoNSError)
+            completionHandler(SortSelectedRangeError.genericError.nsError)
             return
         }
         

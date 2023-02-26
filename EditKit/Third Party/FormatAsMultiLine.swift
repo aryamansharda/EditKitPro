@@ -52,7 +52,7 @@ final class FormatAsMultiLine: NSObject, XCSourceEditorCommand {
             let selection = invocation.buffer.selections.firstObject,
             let range = selection as? XCSourceTextRange
         else {
-            completionHandler(FormatAsMultliLineError.noSelection.intoNSError)
+            completionHandler(FormatAsMultliLineError.noSelection.nsError)
             return
         }
 
@@ -120,7 +120,7 @@ final class FormatAsMultiLine: NSObject, XCSourceEditorCommand {
         case (.none, .some):
             selectionKind = .array
         default:
-            completionHandler(FormatAsMultliLineError.noSelection.intoNSError)
+            completionHandler(FormatAsMultliLineError.noSelection.nsError)
             return
         }
 
@@ -135,7 +135,7 @@ final class FormatAsMultiLine: NSObject, XCSourceEditorCommand {
 
         /// Make sure there's an opening and closing index.
         guard let openingBracesIndex = openingBracesIndex, let closingBracesIndex = closingBracesIndex else {
-            completionHandler(FormatAsMultliLineError.unbalancedBrackets.intoNSError)
+            completionHandler(FormatAsMultliLineError.unbalancedBrackets.nsError)
             return
         }
 

@@ -23,7 +23,7 @@ class ImportSorter: NSObject, XCSourceEditorCommand {
         }).sorted()
         
         guard importIndex.count == importFrameworks.count && invocation.buffer.lines.count > importIndex.count else {
-            completionHandler(GenericError.default.intoNSError)
+            completionHandler(GenericError.default.nsError)
             return
         }
 

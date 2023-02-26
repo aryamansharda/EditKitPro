@@ -25,7 +25,7 @@ class ToggleBraceLines: XcodeLines {
                         }
                     }
                 } else {
-                    completionHandler(XcodeLinesError.invalidLineSelection.intoNSError)
+                    completionHandler(XcodeLinesError.invalidLineSelection.nsError)
                     return
                 }
             }
@@ -33,7 +33,7 @@ class ToggleBraceLines: XcodeLines {
             invocation.buffer.selections.removeAllObjects()
             completionHandler(nil)
         } catch {
-            completionHandler(GenericError.default.intoNSError)
+            completionHandler(GenericError.default.nsError)
         }
     }
 }
@@ -53,7 +53,7 @@ class RemoveBraceLines: XcodeLines {
                         }
                     }
                 } else {
-                    completionHandler(XcodeLinesError.invalidLineSelection.intoNSError)
+                    completionHandler(XcodeLinesError.invalidLineSelection.nsError)
                     return
                 }
             }
@@ -61,7 +61,7 @@ class RemoveBraceLines: XcodeLines {
             invocation.buffer.selections.removeAllObjects()
             completionHandler(nil)
         } catch {
-            completionHandler(GenericError.default.intoNSError)
+            completionHandler(GenericError.default.nsError)
         }
     }
 }

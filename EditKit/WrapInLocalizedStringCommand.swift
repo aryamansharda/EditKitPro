@@ -12,7 +12,7 @@ class WrapInLocalizedStringCommand  {
     static func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         // Ensure a selection is provided
         guard let selection = invocation.buffer.selections.firstObject as? XCSourceTextRange else {
-            completionHandler(GenericError.default.intoNSError)
+            completionHandler(GenericError.default.nsError)
             return
         }
 

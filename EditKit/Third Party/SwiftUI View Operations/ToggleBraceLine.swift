@@ -21,7 +21,7 @@ class ToggleBraceLine: XcodeLines {
                         toggleComment(index: found + selection.start.line)
                     }
                 } else {
-                    completionHandler(XcodeLinesError.invalidLineSelection.intoNSError)
+                    completionHandler(XcodeLinesError.invalidLineSelection.nsError)
                     return
                 }
             }
@@ -29,7 +29,7 @@ class ToggleBraceLine: XcodeLines {
             invocation.buffer.selections.removeAllObjects()
             completionHandler(nil)
         } catch {
-            completionHandler(GenericError.default.intoNSError)
+            completionHandler(GenericError.default.nsError)
         }
     }
 }
@@ -49,7 +49,7 @@ class RemoveBraceLine: XcodeLines {
                         removeLine(index: selection.start.line)
                     }
                 } else {
-                    completionHandler(XcodeLinesError.invalidLineSelection.intoNSError)
+                    completionHandler(XcodeLinesError.invalidLineSelection.nsError)
                     return
                 }
             }
@@ -57,7 +57,7 @@ class RemoveBraceLine: XcodeLines {
             invocation.buffer.selections.removeAllObjects()
             completionHandler(nil)
         } catch {
-            completionHandler(GenericError.default.intoNSError)
+            completionHandler(GenericError.default.nsError)
         }
     }
 }

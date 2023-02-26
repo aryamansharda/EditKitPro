@@ -8,16 +8,6 @@
 import XcodeKit
 import AppKit
 
-extension Error where Self: LocalizedError {
-    var intoNSError: NSError  {
-        let userInfo: [String : Any] = [
-            NSLocalizedFailureReasonErrorKey : errorDescription ?? String()
-        ]
-
-        return NSError(domain: String(), code: 0, userInfo: userInfo)
-    }
-}
-
 enum GenericError: Error, LocalizedError {
     case `default`
 
@@ -31,27 +21,27 @@ enum GenericError: Error, LocalizedError {
 
 struct EditorController {
     enum EditorCommandIdentifier: String {
-        case alignAroundEquals              = "EditKitPro.EditKit.AlignAroundEquals"
-        case autoCreateExtensionMarks       = "EditKitPro.EditKit.AutoCreateExtensionMarks"
-        case beautifyJSON                   = "EditKitPro.EditKit.BeautifyJSON"
-        case convertJSONtoCodable           = "EditKitPro.EditKit.ConvertJSONToCodable"
-        case createTypeDefinition           = "EditKitPro.EditKit.CreateTypeDefinition"
-        case formatAsMultiLine              = "EditKitPro.EditKit.FormatAsMultiLine"
-        case formatCodeForSharing           = "EditKitPro.EditKit.FormatCodeForSharing"
-        case searchOnGitHub                 = "EditKitPro.EditKit.SearchOnPlatform.GitHub"
-        case searchOnGoogle                 = "EditKitPro.EditKit.SearchOnPlatform.Google"
-        case searchOnStackOverflow          = "EditKitPro.EditKit.SearchOnPlatform.StackOverflow"
-        case sortImports                    = "EditKitPro.EditKit.SortImports"
-        case sortLinesAlphabeticallyAscending        = "EditKitPro.EditKit.SortLinesAlphabeticallyAscending"
-        case sortLinesAlphabeticallyDescending        = "EditKitPro.EditKit.SortLinesAlphabeticallyDescending"
-        case disableOuterView              = "EditKitPro.EditKit.DisableOuterView"
-        case disableView              = "EditKitPro.EditKit.DisableView"
-        case deleteOuterView              = "EditKitPro.EditKit.DeleteOuterView"
-        case deleteView              = "EditKitPro.EditKit.DeleteView"
-        case sortLinesByLength              = "EditKitPro.EditKit.SortLinesByLength"
-        case stripTrailingWhitespaceInFile  = "EditKitPro.EditKit.StripTrailingWhitespaceInFile"
-        case wrapInIfDef                    = "EditKitPro.EditKit.WrapInIfDef"
-        case wrapInLocalizedString          = "EditKitPro.EditKit.WrapInLocalizedString"
+        case alignAroundEquals = "EditKitPro.EditKit.AlignAroundEquals"
+        case autoCreateExtensionMarks = "EditKitPro.EditKit.AutoCreateExtensionMarks"
+        case beautifyJSON = "EditKitPro.EditKit.BeautifyJSON"
+        case convertJSONtoCodable = "EditKitPro.EditKit.ConvertJSONToCodable"
+        case createTypeDefinition = "EditKitPro.EditKit.CreateTypeDefinition"
+        case formatAsMultiLine = "EditKitPro.EditKit.FormatAsMultiLine"
+        case formatCodeForSharing = "EditKitPro.EditKit.FormatCodeForSharing"
+        case searchOnGitHub = "EditKitPro.EditKit.SearchOnPlatform.GitHub"
+        case searchOnGoogle = "EditKitPro.EditKit.SearchOnPlatform.Google"
+        case searchOnStackOverflow = "EditKitPro.EditKit.SearchOnPlatform.StackOverflow"
+        case sortImports = "EditKitPro.EditKit.SortImports"
+        case sortLinesAlphabeticallyAscending = "EditKitPro.EditKit.SortLinesAlphabeticallyAscending"
+        case sortLinesAlphabeticallyDescending = "EditKitPro.EditKit.SortLinesAlphabeticallyDescending"
+        case disableOuterView = "EditKitPro.EditKit.DisableOuterView"
+        case disableView = "EditKitPro.EditKit.DisableView"
+        case deleteOuterView = "EditKitPro.EditKit.DeleteOuterView"
+        case deleteView = "EditKitPro.EditKit.DeleteView"
+        case sortLinesByLength = "EditKitPro.EditKit.SortLinesByLength"
+        case stripTrailingWhitespaceInFile = "EditKitPro.EditKit.StripTrailingWhitespaceInFile"
+        case wrapInIfDef = "EditKitPro.EditKit.WrapInIfDef"
+        case wrapInLocalizedString = "EditKitPro.EditKit.WrapInLocalizedString"
     }
 
     static func handle(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
@@ -76,17 +66,14 @@ struct EditorController {
             StripTrailingWhitespaceCommand.perform(with: invocation, completionHandler: completionHandler)
 
         case .alignAroundEquals:
-            /// This appears to work now, but Xcode can format lines slightly differently
-            /// Sometimes there will be a few millimeters of misalignment
-            /// When you check in VSCode, everything is as it should be
             AlignAroundEqualsCommand.perform(with: invocation, completionHandler: completionHandler)
 
         case .formatCodeForSharing:
-            /// Note: this doesn't work on Slack regardless
+            // Note: this doesn't work on Slack regardless
             FormatCodeForSharingCommand.perform(with: invocation, completionHandler: completionHandler)
 
         case .formatAsMultiLine:
-            /// This only works on single lines, it starts goofing up otherwise.
+            // This only works on single lines
             FormatAsMultiLine().perform(with: invocation, completionHandler: completionHandler)
 
         case .autoCreateExtensionMarks:

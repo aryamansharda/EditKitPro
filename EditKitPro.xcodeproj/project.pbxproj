@@ -68,6 +68,7 @@
 		93B2CF8629760B9B006E1A23 /* Tree+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF7F29760B9B006E1A23 /* Tree+Debug.swift */; };
 		93B2CF8D29761F0E006E1A23 /* BeautifyJSONCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF8C29761F0E006E1A23 /* BeautifyJSONCommand.swift */; };
 		93B2CF8F29762854006E1A23 /* CreateTypeDefinitionCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF8E29762854006E1A23 /* CreateTypeDefinitionCommand.swift */; };
+		93DB7E9929AB0AA600F6B9ED /* Error+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7E9829AB0AA600F6B9ED /* Error+Additions.swift */; };
 		93E9E96629A84290009AD3C7 /* Roadmap in Frameworks */ = {isa = PBXBuildFile; productRef = 93E9E96529A84290009AD3C7 /* Roadmap */; };
 		93E9E96829A845C6009AD3C7 /* RoadmapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E9E96729A845C6009AD3C7 /* RoadmapView.swift */; };
 		93F9E0E2297525B2009E3B27 /* WrapInLocalizedStringCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F9E0E1297525B2009E3B27 /* WrapInLocalizedStringCommand.swift */; };
@@ -189,6 +190,7 @@
 		93B2CF8029760B9B006E1A23 /* Array+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Utils.swift"; sourceTree = "<group>"; };
 		93B2CF8C29761F0E006E1A23 /* BeautifyJSONCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautifyJSONCommand.swift; sourceTree = "<group>"; };
 		93B2CF8E29762854006E1A23 /* CreateTypeDefinitionCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTypeDefinitionCommand.swift; sourceTree = "<group>"; };
+		93DB7E9829AB0AA600F6B9ED /* Error+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Additions.swift"; sourceTree = "<group>"; };
 		93E9E96729A845C6009AD3C7 /* RoadmapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadmapView.swift; sourceTree = "<group>"; };
 		93F9E0E1297525B2009E3B27 /* WrapInLocalizedStringCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapInLocalizedStringCommand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -360,6 +362,7 @@
 				93B2CF8C29761F0E006E1A23 /* BeautifyJSONCommand.swift */,
 				932F4D8A294E4A8D00FA27CE /* FormatCodeForSharingCommand.swift */,
 				932F4D90294E538A00FA27CE /* WrapInIfDefCommand.swift */,
+				93DB7E9729AB0A5100F6B9ED /* Extensions */,
 				93B2CF37297603DF006E1A23 /* Third Party */,
 				93B2833B294AEDDD00364206 /* EditKit.entitlements */,
 				93B2833A294AEDDD00364206 /* Info.plist */,
@@ -404,6 +407,14 @@
 				93B2CF7F29760B9B006E1A23 /* Tree+Debug.swift */,
 			);
 			path = "JSON to Codable";
+			sourceTree = "<group>";
+		};
+		93DB7E9729AB0A5100F6B9ED /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				93DB7E9829AB0AA600F6B9ED /* Error+Additions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -616,6 +627,7 @@
 				9378B85B297A362E00C12050 /* Parser.swift in Sources */,
 				9378B841297A16F900C12050 /* String+Extension.swift in Sources */,
 				93B2CF8D29761F0E006E1A23 /* BeautifyJSONCommand.swift in Sources */,
+				93DB7E9929AB0AA600F6B9ED /* Error+Additions.swift in Sources */,
 				93B2CF7929760B94006E1A23 /* KotlinGenerator.swift in Sources */,
 				93B2CF7329760B8B006E1A23 /* KotlinTypeHandler.swift in Sources */,
 				93B2CF362975FB52006E1A23 /* AutoMarkCommand.swift in Sources */,
