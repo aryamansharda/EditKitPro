@@ -40,7 +40,7 @@ Alternatively, you can clone this Xcode project:
 4. You should see a debug version of Xcode appear. Pick any project or create a new one.
 5. Navigate to a source code file. Now, in the Editor dropdown menu, you should now see an entry for `EditKit`.
 
-## Prerequisites
+## Requirements
 Please make sure you **only have one valid** installation of Xcode on your machine and have a valid Apple Developer account as signing the extension will be required in order to run it.
 
 ## Contributing
@@ -56,6 +56,7 @@ class AlignAroundEqualsCommand {
     static func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         ...
     }
+}
 ```
 
 or 
@@ -65,6 +66,7 @@ class BeautifyJSONCommand: NSObject, XCSourceEditorCommand {
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         ....
     }
+}
 ```
 
 All files in the `Third Party` folder are taken from the list of open source libraries mentioned below.
