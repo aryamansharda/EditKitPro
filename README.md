@@ -1,3 +1,5 @@
+![](Assets/banner.png)
+
 # EditKitPro
 EditKit Pro provides a suite of tools to help you write better, cleaner, and more efficient code. Whether you need to quickly format your code, create Codable models, generate mock data, or move around in SwiftUI more efficiently, EditKit Pro has you covered.
 
