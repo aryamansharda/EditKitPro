@@ -10,6 +10,7 @@ import XcodeKit
 
 final class WrapInIfDefCommand {
     static func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
+        // Verifies a selection exists
         guard let selections = invocation.buffer.selections as? [XCSourceTextRange], let selection = selections.first else {
             completionHandler(GenericError.default.nsError)
             return
@@ -18,8 +19,11 @@ final class WrapInIfDefCommand {
         let startIndex = selection.start.line
         let endIndex = selection.end.line
         let selectedRange = NSRange(location: startIndex, length: 1 + endIndex - startIndex)
+
+        // Grabs the currently selected lines
         let selectedLines = invocation.buffer.lines.subarray(with: selectedRange)
 
+        // Wraps the selection in an #ifdef and uses the selection for both parts of the conditional body
         invocation.buffer.lines.insert("#if swift(>=5.5)", at: startIndex)
 
         for string in selectedLines.reversed() {

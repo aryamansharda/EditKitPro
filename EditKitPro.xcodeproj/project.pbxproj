@@ -72,6 +72,9 @@
 		93DB7E9C29AB0CC400F6B9ED /* Data+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7E9B29AB0CC400F6B9ED /* Data+Additions.swift */; };
 		93DB7E9E29AB0D1F00F6B9ED /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7E9D29AB0D1F00F6B9ED /* String+Additions.swift */; };
 		93DB7EA029AB0D4400F6B9ED /* XCSourceTextBuffer+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7E9F29AB0D4400F6B9ED /* XCSourceTextBuffer+Additions.swift */; };
+		93DB7EA229AB0F2900F6B9ED /* StringIndex+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7EA129AB0F2900F6B9ED /* StringIndex+Additions.swift */; };
+		93DB7EA429AB0F3D00F6B9ED /* Collection+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7EA329AB0F3D00F6B9ED /* Collection+Additions.swift */; };
+		93DB7EA629AB0F5200F6B9ED /* StringProtocol+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7EA529AB0F5200F6B9ED /* StringProtocol+Additions.swift */; };
 		93E9E96629A84290009AD3C7 /* Roadmap in Frameworks */ = {isa = PBXBuildFile; productRef = 93E9E96529A84290009AD3C7 /* Roadmap */; };
 		93E9E96829A845C6009AD3C7 /* RoadmapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E9E96729A845C6009AD3C7 /* RoadmapView.swift */; };
 		93F9E0E2297525B2009E3B27 /* WrapInLocalizedStringCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F9E0E1297525B2009E3B27 /* WrapInLocalizedStringCommand.swift */; };
@@ -197,6 +200,9 @@
 		93DB7E9B29AB0CC400F6B9ED /* Data+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Additions.swift"; sourceTree = "<group>"; };
 		93DB7E9D29AB0D1F00F6B9ED /* String+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
 		93DB7E9F29AB0D4400F6B9ED /* XCSourceTextBuffer+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCSourceTextBuffer+Additions.swift"; sourceTree = "<group>"; };
+		93DB7EA129AB0F2900F6B9ED /* StringIndex+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringIndex+Additions.swift"; sourceTree = "<group>"; };
+		93DB7EA329AB0F3D00F6B9ED /* Collection+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Additions.swift"; sourceTree = "<group>"; };
+		93DB7EA529AB0F5200F6B9ED /* StringProtocol+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringProtocol+Additions.swift"; sourceTree = "<group>"; };
 		93E9E96729A845C6009AD3C7 /* RoadmapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadmapView.swift; sourceTree = "<group>"; };
 		93F9E0E1297525B2009E3B27 /* WrapInLocalizedStringCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapInLocalizedStringCommand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -422,6 +428,9 @@
 				93DB7E9B29AB0CC400F6B9ED /* Data+Additions.swift */,
 				93DB7E9D29AB0D1F00F6B9ED /* String+Additions.swift */,
 				93DB7E9F29AB0D4400F6B9ED /* XCSourceTextBuffer+Additions.swift */,
+				93DB7EA129AB0F2900F6B9ED /* StringIndex+Additions.swift */,
+				93DB7EA329AB0F3D00F6B9ED /* Collection+Additions.swift */,
+				93DB7EA529AB0F5200F6B9ED /* StringProtocol+Additions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -628,6 +637,8 @@
 				9378B85F297A362E00C12050 /* SwiftParser.swift in Sources */,
 				93B2CF6C29760B7A006E1A23 /* Copyable.swift in Sources */,
 				93B2CF332975DA4E006E1A23 /* FormatAsMultiLine.swift in Sources */,
+				93DB7EA629AB0F5200F6B9ED /* StringProtocol+Additions.swift in Sources */,
+				93DB7EA429AB0F3D00F6B9ED /* Collection+Additions.swift in Sources */,
 				9378B84E297A2C2F00C12050 /* FormatLines.swift in Sources */,
 				93B2CF6A29760B77006E1A23 /* Tree.swift in Sources */,
 				93B2CF8429760B9B006E1A23 /* Dictionary+Utils.swift in Sources */,
@@ -651,6 +662,7 @@
 				93B2CF7A29760B94006E1A23 /* StructGenerator.swift in Sources */,
 				9378B853297A2C3600C12050 /* ToggleBraceLine.swift in Sources */,
 				9378B867297A364200C12050 /* Extension.swift in Sources */,
+				93DB7EA229AB0F2900F6B9ED /* StringIndex+Additions.swift in Sources */,
 				93B2CF6929760B77006E1A23 /* Node.swift in Sources */,
 				932F4D91294E538A00FA27CE /* WrapInIfDefCommand.swift in Sources */,
 				9378B852297A2C3600C12050 /* ToggleBraceLines.swift in Sources */,

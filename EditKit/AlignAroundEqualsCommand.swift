@@ -8,19 +8,6 @@
 import Foundation
 import XcodeKit
 
-extension StringProtocol {
-    func distance(of element: Element) -> Int? { firstIndex(of: element)?.distance(in: self) }
-    func distance<S: StringProtocol>(of string: S) -> Int? { range(of: string)?.lowerBound.distance(in: self) }
-}
-
-extension Collection {
-    func distance(to index: Index) -> Int { distance(from: startIndex, to: index) }
-}
-
-extension String.Index {
-    func distance<S: StringProtocol>(in string: S) -> Int { string.distance(to: self) }
-}
-
 final class AlignAroundEqualsCommand {
     static func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         // Ensure a selection is provided
