@@ -32,7 +32,10 @@ Demos of these features can be seen on the [blog post](https://digitalbunker.dev
 ## Installation
 The most convenient way of installing the current release is through the [App Store](https://apps.apple.com/us/app/editkit-pro/id1659984546?mt=12). Then, you'll need to open `System Preferences -> Extensions -> Enable EditKit Pro`. 
 
-Alternatively, you can clone this Xcode project. 
+If EditKit Pro is not visible in Settings, this may be due to multiple conflicting Xcode installations.
+
+Alternatively, you can clone this Xcode project:
+ 
 1. Once downloaded, open EditKit.xcodeproj.
 2. Before running, make sure to change the Team to your Personal Development Team for both the main app target and the `Editor` extension. The extension will not appear in Xcode unless it is signed correctly.
 3. Select the `Editor` extension and hit Run.
@@ -50,6 +53,22 @@ All contributions are welcome. Just fork the repo and make a pull request.
 3. In `EditorController.swift`, add a case to the `handle` function for your new command.
 4. Now, you implement your new functionality by creating a new `XCSourceEditorCommand` class (i.e. `BeautifyJSONCommand`) or creating a class that operates on the `XCSourceEditorCommandInvocation` provided by the Xcode Editor Extension (i.e. `AlignAroundEqualsCommand`
 
+```
+class AlignAroundEqualsCommand {
+    static func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
+        ...
+    }
+```
+
+or 
+
+```
+class BeautifyJSONCommand: NSObject, XCSourceEditorCommand {
+    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
+        ....
+    }
+```
+
 All files in the `Third Party` folder are taken from the list of open source libraries mentioned below.
 
 ## Open Source Dependencies
@@ -57,4 +76,3 @@ EditKit would not have been possible without the help of these open source libra
 
 ## Contact
 If you have any questions, feel free to message me at [aryaman@digitalbunker.dev](mailto:aryaman@digitalbunker.dev) or on [Twitter](https://twitter.com/aryamansharda).
-
