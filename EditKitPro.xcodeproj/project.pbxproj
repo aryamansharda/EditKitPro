@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		930CD0A0294E456500F58F30 /* StripTrailingWhitespaceCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930CD09F294E456500F58F30 /* StripTrailingWhitespaceCommand.swift */; };
+		931CC2FC29AB11430035AA0B /* StandardButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931CC2FB29AB11430035AA0B /* StandardButtonStyle.swift */; };
 		932F4D89294E49A900FA27CE /* AlignAroundEqualsCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4D88294E49A900FA27CE /* AlignAroundEqualsCommand.swift */; };
 		932F4D8B294E4A8D00FA27CE /* FormatCodeForSharingCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4D8A294E4A8D00FA27CE /* FormatCodeForSharingCommand.swift */; };
 		932F4D8F294E504300FA27CE /* SearchInCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4D8E294E504300FA27CE /* SearchInCommand.swift */; };
@@ -131,6 +132,7 @@
 
 /* Begin PBXFileReference section */
 		930CD09F294E456500F58F30 /* StripTrailingWhitespaceCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripTrailingWhitespaceCommand.swift; sourceTree = "<group>"; };
+		931CC2FB29AB11430035AA0B /* StandardButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButtonStyle.swift; sourceTree = "<group>"; };
 		932F4D88294E49A900FA27CE /* AlignAroundEqualsCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignAroundEqualsCommand.swift; sourceTree = "<group>"; };
 		932F4D8A294E4A8D00FA27CE /* FormatCodeForSharingCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatCodeForSharingCommand.swift; sourceTree = "<group>"; };
 		932F4D8E294E504300FA27CE /* SearchInCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInCommand.swift; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 			children = (
 				93B28300294AEDD200364206 /* EditKitProApp.swift */,
 				93B28302294AEDD200364206 /* LandingPageView.swift */,
+				931CC2FB29AB11430035AA0B /* StandardButtonStyle.swift */,
 				93E9E96729A845C6009AD3C7 /* RoadmapView.swift */,
 				93B28304294AEDD200364206 /* Assets.xcassets */,
 				93B28309294AEDD200364206 /* EditKitPro.entitlements */,
@@ -604,6 +607,7 @@
 			files = (
 				93E9E96829A845C6009AD3C7 /* RoadmapView.swift in Sources */,
 				93B28303294AEDD200364206 /* LandingPageView.swift in Sources */,
+				931CC2FC29AB11430035AA0B /* StandardButtonStyle.swift in Sources */,
 				93B28301294AEDD200364206 /* EditKitProApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
