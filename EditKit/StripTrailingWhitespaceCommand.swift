@@ -8,7 +8,7 @@
 import Foundation
 import XcodeKit
 
-class StripTrailingWhitespaceCommand  {
+final class StripTrailingWhitespaceCommand  {
     static func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         // Keep an array of changed line indices.
         var changedLineIndexes = [Int]()

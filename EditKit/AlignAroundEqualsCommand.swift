@@ -21,7 +21,7 @@ extension String.Index {
     func distance<S: StringProtocol>(in string: S) -> Int { string.distance(to: self) }
 }
 
-class AlignAroundEqualsCommand {
+final class AlignAroundEqualsCommand {
     static func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         // Ensure a selection is provided
         guard let selection = invocation.buffer.selections.firstObject as? XCSourceTextRange else {
@@ -43,9 +43,8 @@ class AlignAroundEqualsCommand {
             maximumEqualCharacterIndex = max(maximumEqualCharacterIndex, index + 1)
         }
 
-        // Loop through all lines, split around equal, and reformat trimming along the way
+        // Loop through all lines, split around equal, and reformat + trimming along the way
         for lineIndex in selection.start.line...selection.end.line {
-
             guard let originalLine = invocation.buffer.lines[lineIndex] as? String else {
                 // Input was not a String
                 completionHandler(GenericError.default.nsError)
@@ -59,14 +58,15 @@ class AlignAroundEqualsCommand {
 
             var newLine = String()
 
-            // Grab the text to the left of the equals sign and clean it up a bit
+            // Grab the text to the left of the equals sign and pads it with extra spaces to be
+            // in line with the furthest equal sign identified
             if let lhs = components.first {
                 let extraPaddingAmount = maximumEqualCharacterIndex - lhs.count
                 newLine = lhs + String(repeating: " ", count: extraPaddingAmount)
                 newLine += "= "
             }
 
-            // Grab the text to the right of the equals sign and clean it up a bit
+            // Grab the text to the right of the equals sign and append it
             if let rhs = components.last?.trimmingCharacters(in: .whitespacesAndNewlines) {
                 newLine += rhs
             }

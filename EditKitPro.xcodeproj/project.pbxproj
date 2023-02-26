@@ -69,6 +69,9 @@
 		93B2CF8D29761F0E006E1A23 /* BeautifyJSONCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF8C29761F0E006E1A23 /* BeautifyJSONCommand.swift */; };
 		93B2CF8F29762854006E1A23 /* CreateTypeDefinitionCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2CF8E29762854006E1A23 /* CreateTypeDefinitionCommand.swift */; };
 		93DB7E9929AB0AA600F6B9ED /* Error+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7E9829AB0AA600F6B9ED /* Error+Additions.swift */; };
+		93DB7E9C29AB0CC400F6B9ED /* Data+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7E9B29AB0CC400F6B9ED /* Data+Additions.swift */; };
+		93DB7E9E29AB0D1F00F6B9ED /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7E9D29AB0D1F00F6B9ED /* String+Additions.swift */; };
+		93DB7EA029AB0D4400F6B9ED /* XCSourceTextBuffer+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB7E9F29AB0D4400F6B9ED /* XCSourceTextBuffer+Additions.swift */; };
 		93E9E96629A84290009AD3C7 /* Roadmap in Frameworks */ = {isa = PBXBuildFile; productRef = 93E9E96529A84290009AD3C7 /* Roadmap */; };
 		93E9E96829A845C6009AD3C7 /* RoadmapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E9E96729A845C6009AD3C7 /* RoadmapView.swift */; };
 		93F9E0E2297525B2009E3B27 /* WrapInLocalizedStringCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F9E0E1297525B2009E3B27 /* WrapInLocalizedStringCommand.swift */; };
@@ -191,6 +194,9 @@
 		93B2CF8C29761F0E006E1A23 /* BeautifyJSONCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautifyJSONCommand.swift; sourceTree = "<group>"; };
 		93B2CF8E29762854006E1A23 /* CreateTypeDefinitionCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTypeDefinitionCommand.swift; sourceTree = "<group>"; };
 		93DB7E9829AB0AA600F6B9ED /* Error+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Additions.swift"; sourceTree = "<group>"; };
+		93DB7E9B29AB0CC400F6B9ED /* Data+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Additions.swift"; sourceTree = "<group>"; };
+		93DB7E9D29AB0D1F00F6B9ED /* String+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
+		93DB7E9F29AB0D4400F6B9ED /* XCSourceTextBuffer+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCSourceTextBuffer+Additions.swift"; sourceTree = "<group>"; };
 		93E9E96729A845C6009AD3C7 /* RoadmapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadmapView.swift; sourceTree = "<group>"; };
 		93F9E0E1297525B2009E3B27 /* WrapInLocalizedStringCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapInLocalizedStringCommand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -413,6 +419,9 @@
 			isa = PBXGroup;
 			children = (
 				93DB7E9829AB0AA600F6B9ED /* Error+Additions.swift */,
+				93DB7E9B29AB0CC400F6B9ED /* Data+Additions.swift */,
+				93DB7E9D29AB0D1F00F6B9ED /* String+Additions.swift */,
+				93DB7E9F29AB0D4400F6B9ED /* XCSourceTextBuffer+Additions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -625,6 +634,7 @@
 				9378B854297A2C3600C12050 /* XcodeLines.swift in Sources */,
 				9378B868297A364200C12050 /* ExtensionChar.swift in Sources */,
 				9378B85B297A362E00C12050 /* Parser.swift in Sources */,
+				93DB7E9E29AB0D1F00F6B9ED /* String+Additions.swift in Sources */,
 				9378B841297A16F900C12050 /* String+Extension.swift in Sources */,
 				93B2CF8D29761F0E006E1A23 /* BeautifyJSONCommand.swift in Sources */,
 				93DB7E9929AB0AA600F6B9ED /* Error+Additions.swift in Sources */,
@@ -634,6 +644,7 @@
 				9378B85C297A362E00C12050 /* Indent.swift in Sources */,
 				9378B860297A362E00C12050 /* Pref.swift in Sources */,
 				93B2CF7429760B8B006E1A23 /* SwiftTypeHandler.swift in Sources */,
+				93DB7EA029AB0D4400F6B9ED /* XCSourceTextBuffer+Additions.swift in Sources */,
 				9378B83F297A16F200C12050 /* CountableClosedRange+Extension.swift in Sources */,
 				93B2CF7029760B83006E1A23 /* GeneratorType.swift in Sources */,
 				93B2CF8F29762854006E1A23 /* CreateTypeDefinitionCommand.swift in Sources */,
@@ -660,6 +671,7 @@
 				93B2CF8529760B9B006E1A23 /* Data+Utils.swift in Sources */,
 				93F9E0E2297525B2009E3B27 /* WrapInLocalizedStringCommand.swift in Sources */,
 				93B28339294AEDDD00364206 /* SourceEditorCommand.swift in Sources */,
+				93DB7E9C29AB0CC400F6B9ED /* Data+Additions.swift in Sources */,
 				9378B849297A170D00C12050 /* SortSelectedLinesByAlphabetically.swift in Sources */,
 				930CD0A0294E456500F58F30 /* StripTrailingWhitespaceCommand.swift in Sources */,
 				9378B84B297A178200C12050 /* Sort.swift in Sources */,

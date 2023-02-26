@@ -8,7 +8,7 @@
 import Foundation
 import XcodeKit
 
-class WrapInLocalizedStringCommand  {
+final class WrapInLocalizedStringCommand  {
     static func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         // Ensure a selection is provided
         guard let selection = invocation.buffer.selections.firstObject as? XCSourceTextRange else {
@@ -25,6 +25,7 @@ class WrapInLocalizedStringCommand  {
             }
 
             do {
+                // Find and capture text in quotes
                 let regex = try NSRegularExpression(pattern: "\"(.*?)\"")
                 let matches = regex.matches(in: originalLine, options: [], range: NSRange(location: 0, length: originalLine.utf16.count))
 
@@ -45,6 +46,7 @@ class WrapInLocalizedStringCommand  {
                 }
             } catch {
                 // Regex was bad!
+                completionHandler(GenericError.default.nsError)
             }
         }
 
