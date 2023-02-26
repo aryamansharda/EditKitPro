@@ -355,38 +355,30 @@
 				93B28338294AEDDD00364206 /* SourceEditorCommand.swift */,
 				93B28346294AEE0200364206 /* EditorController.swift */,
 				930CD09F294E456500F58F30 /* StripTrailingWhitespaceCommand.swift */,
-				93B2CF37297603DF006E1A23 /* Vendor */,
-				93B2CF342975E291006E1A23 /* Mine */,
+				93F9E0E1297525B2009E3B27 /* WrapInLocalizedStringCommand.swift */,
+				932F4D88294E49A900FA27CE /* AlignAroundEqualsCommand.swift */,
+				93B2CF8C29761F0E006E1A23 /* BeautifyJSONCommand.swift */,
 				932F4D8A294E4A8D00FA27CE /* FormatCodeForSharingCommand.swift */,
-				93B2CF322975DA4E006E1A23 /* FormatAsMultiLine.swift */,
-				932F4D8E294E504300FA27CE /* SearchInCommand.swift */,
 				932F4D90294E538A00FA27CE /* WrapInIfDefCommand.swift */,
-				93B2CF8E29762854006E1A23 /* CreateTypeDefinitionCommand.swift */,
+				93B2CF37297603DF006E1A23 /* Third Party */,
 				93B2833B294AEDDD00364206 /* EditKit.entitlements */,
 				93B2833A294AEDDD00364206 /* Info.plist */,
 			);
 			path = EditKit;
 			sourceTree = "<group>";
 		};
-		93B2CF342975E291006E1A23 /* Mine */ = {
+		93B2CF37297603DF006E1A23 /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
-				93F9E0E1297525B2009E3B27 /* WrapInLocalizedStringCommand.swift */,
-				932F4D88294E49A900FA27CE /* AlignAroundEqualsCommand.swift */,
-				93B2CF8C29761F0E006E1A23 /* BeautifyJSONCommand.swift */,
-			);
-			path = Mine;
-			sourceTree = "<group>";
-		};
-		93B2CF37297603DF006E1A23 /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
+				93B2CF8E29762854006E1A23 /* CreateTypeDefinitionCommand.swift */,
+				93B2CF322975DA4E006E1A23 /* FormatAsMultiLine.swift */,
 				93B2CF352975FB52006E1A23 /* AutoMarkCommand.swift */,
+				932F4D8E294E504300FA27CE /* SearchInCommand.swift */,
 				9378B84C297A243400C12050 /* SwiftUI View Operations */,
 				9378B83D297A16D700C12050 /* Sort Lines and Imports */,
 				93B2CF562976096D006E1A23 /* JSON to Codable */,
 			);
-			path = Vendor;
+			path = "Third Party";
 			sourceTree = "<group>";
 		};
 		93B2CF562976096D006E1A23 /* JSON to Codable */ = {

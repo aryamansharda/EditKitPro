@@ -42,7 +42,7 @@ enum SearchEngine {
     }
 
     func url(with keyword: String) -> String {
-        return urlPrefix + keyword.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlHostAllowed)!
+        urlPrefix + keyword.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlHostAllowed)!
     }
 }
 

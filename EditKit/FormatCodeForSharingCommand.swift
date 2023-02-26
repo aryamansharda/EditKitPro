@@ -75,7 +75,6 @@ class FormatCodeForSharingCommand {
 }
 
 fileprivate extension String {
-
     func beginingSpaceCount() -> Int {
         var count = 0
         for character in self {
@@ -99,7 +98,6 @@ fileprivate extension String {
 }
 
 fileprivate extension XCSourceTextBuffer {
-
     func substring(by index: Int, from: Int, to: Int? = nil) -> String {
         var index = index
         if index == lines.count {
