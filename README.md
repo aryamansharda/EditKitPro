@@ -78,7 +78,6 @@ EditKit would not have been possible without the help and inspiration from these
 
 - [XShared](https://github.com/Otbivnoe/XShared/)
 - [Xcode Source Editor Extension](https://github.com/cellular/xcodeextensionmark-swift/)
-- [XalignProject](https://github.com/love-everyday/XalignProject/)
 - [alanzeino](https://github.com/alanzeino/source-editor-extension/)
 - [DeclareType](https://github.com/timaktimak/DeclareType)
 - [Sorter](https://github.com/aniltaskiran/LazyXcode/)
