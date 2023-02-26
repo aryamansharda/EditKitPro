@@ -84,7 +84,6 @@ EditKit would not have been possible without the help and inspiration from these
 - [Multiliner](https://github.com/aheze/Multiliner/)
 - [swiftuitools](https://github.com/tgunr/swiftuitools/)
 - [Finch](https://github.com/NicholasBellucci/Finch/)
-- [Xcode-Search](https://github.com/skyline75489/Xcode-Search/)
 
 Note: Many of their original implementations have modified to support Swift 5.7+ and to fix bugs.
 
