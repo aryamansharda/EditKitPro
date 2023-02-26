@@ -1,6 +1,4 @@
 # EditKitPro
-
-## Description
 EditKit Pro provides a suite of tools to help you write better, cleaner, and more efficient code. Whether you need to quickly format your code, create Codable models, generate mock data, or move around in SwiftUI more efficiently, EditKit Pro has you covered.
 
 This is an open-source Xcode Editor Extension with a variety of mini-tools for iOS / macOS Developers.
