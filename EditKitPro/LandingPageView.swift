@@ -73,12 +73,15 @@ extension LandingPageView {
             }
         }.popover(isPresented: self.$isPopover, arrowEdge: .bottom) {
             RoadmapContainerView()
+                .foregroundColor(.black)
         }
         .modifier(StandardButtonStyle(bodyColor: .green))
     }
 
     var contributeButton: some View {
-        Button(action: { self.isPopover.toggle() }) {
+        Button(action: {
+            NSWorkspace.shared.open(URL(string: "https://github.com/aryamansharda/EditKitPro")!)
+        }) {
             HStack {
                 Image(systemName: "swift")
                     .shadow(radius: 2.0)
@@ -88,8 +91,6 @@ extension LandingPageView {
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
             }
-        }.popover(isPresented: self.$isPopover, arrowEdge: .bottom) {
-            RoadmapContainerView()
         }
         .modifier(StandardButtonStyle(bodyColor: .green))
     }
