@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		930CD0A0294E456500F58F30 /* StripTrailingWhitespaceCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930CD09F294E456500F58F30 /* StripTrailingWhitespaceCommand.swift */; };
 		931CC2FC29AB11430035AA0B /* StandardButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931CC2FB29AB11430035AA0B /* StandardButtonStyle.swift */; };
+		932A9CCF29B06BF6003400C5 /* InitializerFromSelectionCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932A9CCE29B06BF6003400C5 /* InitializerFromSelectionCommand.swift */; };
 		932F4D89294E49A900FA27CE /* AlignAroundEqualsCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4D88294E49A900FA27CE /* AlignAroundEqualsCommand.swift */; };
 		932F4D8B294E4A8D00FA27CE /* FormatCodeForSharingCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4D8A294E4A8D00FA27CE /* FormatCodeForSharingCommand.swift */; };
 		932F4D8F294E504300FA27CE /* SearchInCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4D8E294E504300FA27CE /* SearchInCommand.swift */; };
@@ -133,6 +134,7 @@
 /* Begin PBXFileReference section */
 		930CD09F294E456500F58F30 /* StripTrailingWhitespaceCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripTrailingWhitespaceCommand.swift; sourceTree = "<group>"; };
 		931CC2FB29AB11430035AA0B /* StandardButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButtonStyle.swift; sourceTree = "<group>"; };
+		932A9CCE29B06BF6003400C5 /* InitializerFromSelectionCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializerFromSelectionCommand.swift; sourceTree = "<group>"; };
 		932F4D88294E49A900FA27CE /* AlignAroundEqualsCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignAroundEqualsCommand.swift; sourceTree = "<group>"; };
 		932F4D8A294E4A8D00FA27CE /* FormatCodeForSharingCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatCodeForSharingCommand.swift; sourceTree = "<group>"; };
 		932F4D8E294E504300FA27CE /* SearchInCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInCommand.swift; sourceTree = "<group>"; };
@@ -371,6 +373,7 @@
 				93B28336294AEDDD00364206 /* SourceEditorExtension.swift */,
 				93B28338294AEDDD00364206 /* SourceEditorCommand.swift */,
 				93B28346294AEE0200364206 /* EditorController.swift */,
+				932A9CCE29B06BF6003400C5 /* InitializerFromSelectionCommand.swift */,
 				930CD09F294E456500F58F30 /* StripTrailingWhitespaceCommand.swift */,
 				93F9E0E1297525B2009E3B27 /* WrapInLocalizedStringCommand.swift */,
 				932F4D88294E49A900FA27CE /* AlignAroundEqualsCommand.swift */,
@@ -640,6 +643,7 @@
 				93B28337294AEDDD00364206 /* SourceEditorExtension.swift in Sources */,
 				9378B85F297A362E00C12050 /* SwiftParser.swift in Sources */,
 				93B2CF6C29760B7A006E1A23 /* Copyable.swift in Sources */,
+				932A9CCF29B06BF6003400C5 /* InitializerFromSelectionCommand.swift in Sources */,
 				93B2CF332975DA4E006E1A23 /* FormatAsMultiLine.swift in Sources */,
 				93DB7EA629AB0F5200F6B9ED /* StringProtocol+Additions.swift in Sources */,
 				93DB7EA429AB0F3D00F6B9ED /* Collection+Additions.swift in Sources */,

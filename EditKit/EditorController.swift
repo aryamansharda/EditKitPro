@@ -42,6 +42,7 @@ struct EditorController {
         case stripTrailingWhitespaceInFile = "EditKitPro.EditKit.StripTrailingWhitespaceInFile"
         case wrapInIfDef = "EditKitPro.EditKit.WrapInIfDef"
         case wrapInLocalizedString = "EditKitPro.EditKit.WrapInLocalizedString"
+        case initFromSelcectedProperties = "EditKitPro.EditKit.InitializerFromSelection"
     }
 
     static func handle(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
@@ -108,7 +109,9 @@ struct EditorController {
 
         case .deleteView:
             RemoveBraceLines().perform(with: invocation, completionHandler: completionHandler)
-
+        case .initFromSelcectedProperties:
+            //
+            InitializerFromSelectionCommand.perform(with: invocation, completionHandler: completionHandler)
         }
     }
 }
