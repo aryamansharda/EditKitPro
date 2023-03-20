@@ -25,6 +25,11 @@ struct EditorController {
         case autoCreateExtensionMarks = "EditKitPro.EditKit.AutoCreateExtensionMarks"
         case beautifyJSON = "EditKitPro.EditKit.BeautifyJSON"
         case convertJSONtoCodable = "EditKitPro.EditKit.ConvertJSONToCodable"
+        case convertSelectionToUppercase = "EditKitPro.EditKit.ConvertToUppercase"
+        case convertSelectionToLowercase = "EditKitPro.EditKit.ConvertToLowercase"
+        case convertSelectionToSnakeCase = "EditKitPro.EditKit.ConvertToSnakeCase"
+        case convertSelectionToCamelCase = "EditKitPro.EditKit.ConvertToCamelCase"
+        case convertSelectionToPascalCase = "EditKitPro.EditKit.ConvertToPascalCase"
         case createTypeDefinition = "EditKitPro.EditKit.CreateTypeDefinition"
         case formatAsMultiLine = "EditKitPro.EditKit.FormatAsMultiLine"
         case formatCodeForSharing = "EditKitPro.EditKit.FormatCodeForSharing"
@@ -110,8 +115,17 @@ struct EditorController {
         case .deleteView:
             RemoveBraceLines().perform(with: invocation, completionHandler: completionHandler)
         case .initFromSelcectedProperties:
-            //
             InitializerFromSelectionCommand.perform(with: invocation, completionHandler: completionHandler)
+        case .convertSelectionToUppercase:
+            SelectionConversionCommand.perform(with: invocation, operation: .uppercase, completionHandler: completionHandler)
+        case .convertSelectionToLowercase:
+            SelectionConversionCommand.perform(with: invocation, operation: .lowercase, completionHandler: completionHandler)
+        case .convertSelectionToSnakeCase:
+            SelectionConversionCommand.perform(with: invocation, operation: .snakeCase, completionHandler: completionHandler)
+        case .convertSelectionToCamelCase:
+            SelectionConversionCommand.perform(with: invocation, operation: .camelCase, completionHandler: completionHandler)
+        case .convertSelectionToPascalCase:
+            SelectionConversionCommand.perform(with: invocation, operation: .pascalCase, completionHandler: completionHandler)
         }
     }
 }

@@ -34,6 +34,7 @@
 		9378B866297A364200C12050 /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9378B863297A364200C12050 /* ExtensionString.swift */; };
 		9378B867297A364200C12050 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9378B864297A364200C12050 /* Extension.swift */; };
 		9378B868297A364200C12050 /* ExtensionChar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9378B865297A364200C12050 /* ExtensionChar.swift */; };
+		9379570729C812D1008ADB38 /* SelectionConversionCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379570629C812D1008ADB38 /* SelectionConversionCommand.swift */; };
 		93B28301294AEDD200364206 /* EditKitProApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B28300294AEDD200364206 /* EditKitProApp.swift */; };
 		93B28303294AEDD200364206 /* LandingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B28302294AEDD200364206 /* LandingPageView.swift */; };
 		93B28305294AEDD200364206 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93B28304294AEDD200364206 /* Assets.xcassets */; };
@@ -159,6 +160,7 @@
 		9378B863297A364200C12050 /* ExtensionString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
 		9378B864297A364200C12050 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		9378B865297A364200C12050 /* ExtensionChar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionChar.swift; sourceTree = "<group>"; };
+		9379570629C812D1008ADB38 /* SelectionConversionCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionConversionCommand.swift; sourceTree = "<group>"; };
 		93B282FD294AEDD200364206 /* EditKit Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EditKit Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93B28300294AEDD200364206 /* EditKitProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditKitProApp.swift; sourceTree = "<group>"; };
 		93B28302294AEDD200364206 /* LandingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageView.swift; sourceTree = "<group>"; };
@@ -374,6 +376,7 @@
 				93B28338294AEDDD00364206 /* SourceEditorCommand.swift */,
 				93B28346294AEE0200364206 /* EditorController.swift */,
 				932A9CCE29B06BF6003400C5 /* InitializerFromSelectionCommand.swift */,
+				9379570629C812D1008ADB38 /* SelectionConversionCommand.swift */,
 				930CD09F294E456500F58F30 /* StripTrailingWhitespaceCommand.swift */,
 				93F9E0E1297525B2009E3B27 /* WrapInLocalizedStringCommand.swift */,
 				932F4D88294E49A900FA27CE /* AlignAroundEqualsCommand.swift */,
@@ -660,6 +663,7 @@
 				93B2CF7929760B94006E1A23 /* KotlinGenerator.swift in Sources */,
 				93B2CF7329760B8B006E1A23 /* KotlinTypeHandler.swift in Sources */,
 				93B2CF362975FB52006E1A23 /* AutoMarkCommand.swift in Sources */,
+				9379570729C812D1008ADB38 /* SelectionConversionCommand.swift in Sources */,
 				9378B85C297A362E00C12050 /* Indent.swift in Sources */,
 				9378B860297A362E00C12050 /* Pref.swift in Sources */,
 				93B2CF7429760B8B006E1A23 /* SwiftTypeHandler.swift in Sources */,

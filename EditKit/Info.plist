@@ -40,6 +40,46 @@
 					<key>XCSourceEditorCommandName</key>
 					<string>Convert JSON to Codable</string>
 				</dict>
+                <dict>
+                    <key>XCSourceEditorCommandClassName</key>
+                    <string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+                    <key>XCSourceEditorCommandIdentifier</key>
+                    <string>EditKitPro.EditKit.ConvertToUppercase</string>
+                    <key>XCSourceEditorCommandName</key>
+                    <string>Convert selection to uppercase</string>
+                </dict>
+                <dict>
+                    <key>XCSourceEditorCommandClassName</key>
+                    <string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+                    <key>XCSourceEditorCommandIdentifier</key>
+                    <string>EditKitPro.EditKit.ConvertToLowercase</string>
+                    <key>XCSourceEditorCommandName</key>
+                    <string>Convert selection to lowercase</string>
+                </dict>
+                <dict>
+                    <key>XCSourceEditorCommandClassName</key>
+                    <string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+                    <key>XCSourceEditorCommandIdentifier</key>
+                    <string>EditKitPro.EditKit.ConvertToCamelCase</string>
+                    <key>XCSourceEditorCommandName</key>
+                    <string>Convert selection to camelCase</string>
+                </dict>
+                <dict>
+                    <key>XCSourceEditorCommandClassName</key>
+                    <string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+                    <key>XCSourceEditorCommandIdentifier</key>
+                    <string>EditKitPro.EditKit.ConvertToPascalCase</string>
+                    <key>XCSourceEditorCommandName</key>
+                    <string>Convert selection to PascalCase</string>
+                </dict>
+                <dict>
+                    <key>XCSourceEditorCommandClassName</key>
+                    <string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+                    <key>XCSourceEditorCommandIdentifier</key>
+                    <string>EditKitPro.EditKit.ConvertToSnakeCase</string>
+                    <key>XCSourceEditorCommandName</key>
+                    <string>Convert selection to snake_case</string>
+                </dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
