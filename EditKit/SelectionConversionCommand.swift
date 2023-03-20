@@ -37,10 +37,19 @@ final class SelectionConversionCommand  {
         for (index, selectedLine) in selectedLines.enumerated() {
             var modifiedLine = selectedLine
 
-            let isFirstLineOfSelection = index == 0 && selection.start.column != 0
-            let isLastLineOfSelection = index == selectedLines.count - 1 && selection.end.column != 0
+            let isFirstLineOfSelection = index == 0 //&& selection.start.column != 0
+            let isLastLineOfSelection = index == selectedLines.count - 1 //&& selection.end.column != 0
 
-            if isFirstLineOfSelection {
+            if isFirstLineOfSelection && isLastLineOfSelection {
+                let endOfSelection = selectedLine.prefix(selection.end.column)
+                let trailingUnselected = selectedLine.suffix(from: selectedLine.index(selectedLine.startIndex, offsetBy: selection.end.column))
+
+                let leadingUnselected = selectedLine.prefix(selection.start.column)
+                let transformedSelection = applyOperation(operation: operation, on: String(endOfSelection.dropFirst(selection.start.column)))
+
+                modifiedLine = leadingUnselected + transformedSelection + trailingUnselected
+
+            } else if isFirstLineOfSelection {
                 // Handles the case that the first line is a partial selection
                 let selectedSubstring = String(selectedLine.dropFirst(selection.start.column))
                 let unselectedSubstring = selectedLine.prefix(selection.start.column)
