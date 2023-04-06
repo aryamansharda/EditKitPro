@@ -88,6 +88,7 @@ final class SelectionConversionCommand  {
         }
     }
 
+    // Courtesy of ChatGPT :)
     static func toCamelCase(_ input: String) -> String {
         let words = input.components(separatedBy: CharacterSet.alphanumerics.inverted)
         let firstWord = words.first ?? ""
@@ -98,14 +99,44 @@ final class SelectionConversionCommand  {
 
     static func toPascalCase(_ input: String) -> String {
         let words = input.components(separatedBy: CharacterSet.alphanumerics.inverted)
-        let pascalCaseWords = words.map { $0.capitalized }
+        let pascalCaseWords = words.map { word -> String in
+            guard !word.isEmpty else { return "" }
+            let firstChar = String(word.prefix(1)).capitalized
+            let remainingChars = String(word.dropFirst())
+            return firstChar + remainingChars
+        }
         let pascalCase = pascalCaseWords.joined()
         return pascalCase
     }
 
-    static func toSnakeCase(_ input: String) -> String {
-        let words = input.components(separatedBy: CharacterSet.alphanumerics.inverted)
-        let snakeCase = words.map { $0.lowercased() }.joined(separator: "_")
-        return snakeCase
+    static func toSnakeCase(_ inputString: String) -> String {
+        var result = ""
+        var isBeginningOfWord = true
+
+        for character in inputString {
+            if character.isLetter || character.isNumber {
+                if character.isUppercase {
+                    if !isBeginningOfWord {
+                        result.append("_")
+                    }
+                    result.append(String(character).lowercased())
+                } else {
+                    result.append(character)
+                }
+                isBeginningOfWord = false
+            } else {
+                if !isBeginningOfWord {
+                    result.append("_")
+                }
+                isBeginningOfWord = true
+            }
+        }
+
+        // Remove trailing underscore, if any
+        if result.last == "_" {
+            result.removeLast()
+        }
+
+        return result
     }
 }
