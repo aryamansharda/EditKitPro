@@ -104,14 +104,14 @@
 					<key>XCSourceEditorCommandName</key>
 					<string>Create type defintion</string>
 				</dict>
-                <dict>
-                    <key>XCSourceEditorCommandClassName</key>
-                    <string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
-                    <key>XCSourceEditorCommandIdentifier</key>
-                    <string>EditKitPro.EditKit.FormatAsSingleLine</string>
-                    <key>XCSourceEditorCommandName</key>
-                    <string>Format as single line</string>
-                </dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>EditKitPro.EditKit.FormatAsSingleLine</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Format as single line</string>
+				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
