@@ -15,6 +15,10 @@ The current version of EditKit supports the following features:
 - Copy as Markdown
 - Create type definition
 - Format as multi-line
+- Format as single-line
+- Convert selection to snakecase
+- Convert selection to camelcase
+- Convert selection to Pascal case
 - Search selection on GitHub, Google, StackOverflow
 - Sort imports
 - Sort lines alphabetically (ascending and descending)
