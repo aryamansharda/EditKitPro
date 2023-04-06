@@ -23,5 +23,6 @@ struct StandardButtonStyle: ViewModifier {
                 RoundedRectangle(cornerRadius: 50, style: .continuous)
                     .strokeBorder(bodyColor, lineWidth: 1)
             )
+            .focusable(false)
     }
 }

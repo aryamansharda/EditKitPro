@@ -73,7 +73,6 @@ extension LandingPageView {
             }
         }.popover(isPresented: self.$isPopover, arrowEdge: .bottom) {
             RoadmapContainerView()
-                .foregroundColor(.black)
         }
         .modifier(StandardButtonStyle(bodyColor: .green))
     }
@@ -137,5 +136,11 @@ extension LandingPageView {
             }
         }
         .modifier(StandardButtonStyle(bodyColor: .blue))
+    }
+}
+
+struct Previews_LandingPageView_Previews: PreviewProvider {
+    static var previews: some View {
+        LandingPageView()
     }
 }
