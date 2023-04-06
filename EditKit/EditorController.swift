@@ -32,6 +32,7 @@ struct EditorController {
         case convertSelectionToPascalCase = "EditKitPro.EditKit.ConvertToPascalCase"
         case createTypeDefinition = "EditKitPro.EditKit.CreateTypeDefinition"
         case formatAsMultiLine = "EditKitPro.EditKit.FormatAsMultiLine"
+        case formatAsSingleLine = "EditKitPro.EditKit.FormatAsSingleLine"
         case formatCodeForSharing = "EditKitPro.EditKit.FormatCodeForSharing"
         case searchOnGitHub = "EditKitPro.EditKit.SearchOnPlatform.GitHub"
         case searchOnGoogle = "EditKitPro.EditKit.SearchOnPlatform.Google"
@@ -81,6 +82,10 @@ struct EditorController {
         case .formatAsMultiLine:
             // This only works on single lines
             FormatAsMultiLine().perform(with: invocation, completionHandler: completionHandler)
+
+        case .formatAsSingleLine:
+            // This only works on single lines
+            FormatAsSingleLineCommand.perform(with: invocation, completionHandler: completionHandler)
 
         case .autoCreateExtensionMarks:
             AutoMarkCommand().perform(with: invocation, completionHandler: completionHandler)

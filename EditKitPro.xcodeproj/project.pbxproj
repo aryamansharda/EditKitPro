@@ -81,6 +81,7 @@
 		93E9E96629A84290009AD3C7 /* Roadmap in Frameworks */ = {isa = PBXBuildFile; productRef = 93E9E96529A84290009AD3C7 /* Roadmap */; };
 		93E9E96829A845C6009AD3C7 /* RoadmapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E9E96729A845C6009AD3C7 /* RoadmapView.swift */; };
 		93F9E0E2297525B2009E3B27 /* WrapInLocalizedStringCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F9E0E1297525B2009E3B27 /* WrapInLocalizedStringCommand.swift */; };
+		93FFC0BE29DF3FC100B5F406 /* FormatAsSingleLineCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FFC0BD29DF3FC100B5F406 /* FormatAsSingleLineCommand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,6 +212,7 @@
 		93DB7EA529AB0F5200F6B9ED /* StringProtocol+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringProtocol+Additions.swift"; sourceTree = "<group>"; };
 		93E9E96729A845C6009AD3C7 /* RoadmapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadmapView.swift; sourceTree = "<group>"; };
 		93F9E0E1297525B2009E3B27 /* WrapInLocalizedStringCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapInLocalizedStringCommand.swift; sourceTree = "<group>"; };
+		93FFC0BD29DF3FC100B5F406 /* FormatAsSingleLineCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatAsSingleLineCommand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,6 +379,7 @@
 				93B28346294AEE0200364206 /* EditorController.swift */,
 				932A9CCE29B06BF6003400C5 /* InitializerFromSelectionCommand.swift */,
 				9379570629C812D1008ADB38 /* SelectionConversionCommand.swift */,
+				93FFC0BD29DF3FC100B5F406 /* FormatAsSingleLineCommand.swift */,
 				930CD09F294E456500F58F30 /* StripTrailingWhitespaceCommand.swift */,
 				93F9E0E1297525B2009E3B27 /* WrapInLocalizedStringCommand.swift */,
 				932F4D88294E49A900FA27CE /* AlignAroundEqualsCommand.swift */,
@@ -664,6 +667,7 @@
 				93B2CF7329760B8B006E1A23 /* KotlinTypeHandler.swift in Sources */,
 				93B2CF362975FB52006E1A23 /* AutoMarkCommand.swift in Sources */,
 				9379570729C812D1008ADB38 /* SelectionConversionCommand.swift in Sources */,
+				93FFC0BE29DF3FC100B5F406 /* FormatAsSingleLineCommand.swift in Sources */,
 				9378B85C297A362E00C12050 /* Indent.swift in Sources */,
 				9378B860297A362E00C12050 /* Pref.swift in Sources */,
 				93B2CF7429760B8B006E1A23 /* SwiftTypeHandler.swift in Sources */,
@@ -972,6 +976,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = EditKit/EditKit.entitlements;
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 8;
@@ -1000,6 +1005,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = EditKit/EditKit.entitlements;
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 8;
