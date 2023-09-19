@@ -5,6 +5,8 @@ EditKit Pro provides a suite of tools to help you write better, cleaner, and mor
 
 This is an open-source Xcode Editor Extension with a variety of mini-tools for iOS / macOS Developers.
 
+Demos of EditKit can be found on the [blog post](https://digitalbunker.dev/editkit-pro/) and this [YouTube Video](https://www.youtube.com/watch?v=ZM4VHOvPdQU&t=6s&ab_channel=AryamanSharda).
+
 ## Features
 The current version of EditKit supports the following features:
 
@@ -30,8 +32,6 @@ The current version of EditKit supports the following features:
 - SwiftUI -> Delete outer view
 - SwiftUI -> Disable outer view
 - SwiftUI -> Delete view
-
-Demos of these features can be found on the [blog post](https://digitalbunker.dev/editkit-pro/) and this [YouTube Video](https://www.youtube.com/watch?v=ZM4VHOvPdQU&t=6s&ab_channel=AryamanSharda).
 
 ## Installation
 The most convenient way of installing the current release is through the [App Store](https://apps.apple.com/us/app/editkit-pro/id1659984546?mt=12). Once installed, you'll need to open `System Preferences -> Extensions -> Enable EditKit Pro`. 
